@@ -5,13 +5,16 @@
   --font-main-color: #ffffff;
   --font-second-color: #04faf6;
   --emphasis-color: #00f7ff;
+
+  --font-global: "Poppins";
+}
+
+body {
   background-color: var(--main-color);
   max-width: 1240px;
   width: 100%;
-  color: #ffffff;
   margin: 0 auto;
   padding: 0;
-  --font-global: "Poppins";
 }
 
 button {
