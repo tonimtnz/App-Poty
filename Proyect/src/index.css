@@ -35,6 +35,26 @@ button {
   justify-content: center;
 }
 
+.button_post{
+  background-color: #009418;
+  font-family: var(--font-global);
+  color: white;
+  font-weight: 500;
+  font-size: 1rem;
+  border-radius: 50px;
+  border: none;
+  padding: 8px 24px;
+  display: flex;
+  flex-direction: row;
+  gap: 0.5rem;
+  align-items: center;
+  cursor: pointer;
+  transition: all ease-in-out 0.3s;
+  justify-content: center;
+  margin-top: 25px;
+  margin-left: 400px;
+}
+
 button path {
   transition: all ease-in-out 0.3s;
 }
@@ -46,4 +66,74 @@ button:hover {
 
 button:hover path {
   fill: var(--font-main-color);
+}
+
+.form_input{
+  width: 443px;
+  height: 36px;
+  border-radius: 50px;
+  background-color: #D7D7D7;
+}
+
+.form_container{
+  width: 500px;
+  height: 100px;
+  background-color: var(--bg-cards-color);
+  border-radius: 10px;
+  padding: 2rem;
+  margin-top: 2rem;
+}
+
+.fondo_imagen{
+  background-color: var(--font-main-color);
+  width: 27px;
+  height: 36px;
+  border-radius: 50px;
+}
+
+.parte_superior{
+  display: flex;
+  gap: 1.5rem;
+}
+
+.list_container{
+  width: 500px;
+  height: 200px;
+  background-color: var(--bg-cards-color);
+  border-radius: 10px;
+  padding: 2rem;
+  margin-top: 2rem;
+}
+
+.dot_menu{
+  display: flex;
+  flex-direction: row;
+  justify-content: end;
+}
+
+.name_image{
+  display: flex;
+  gap: 2rem;
+}
+
+.comment_post{
+  display: flex;
+  justify-content: center;
+}
+
+.like_replies{
+  display: flex;
+  gap: 2rem;
+}
+
+.like{
+  display: flex;
+}
+
+.replies{
+  display: flex;
+}
+
+h4{
+  margin-top: 0;
 }
