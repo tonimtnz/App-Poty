@@ -1,4 +1,5 @@
 import React from "react";
+import Image from './assets/imagen.jpg' 
 
 function PostList() {
   return (
@@ -38,12 +39,15 @@ function PostList() {
         <h4>Username</h4>
       </div>
       <div className="comment_post">
-        <p>
+        <p className="comentario">
           Lorem, ipsum dolor sit amet consectetur adipisicing elit. Error
           corrupti illum pariatur eligendi? Ratione nesciunt tempore quis minus?
           Doloremque, illo ut nobis minima totam saepe id alias sequi ipsa!
           Quae?
         </p>
+      </div>
+      <div className="imagen">
+        <img src={Image} alt="" width={500} height={200}/>
       </div>
       <div className="like_replies">
         <div className="like">
@@ -59,7 +63,7 @@ function PostList() {
               fill="#F8F8F8"
             />
           </svg>
-          <p>Like</p>
+          <p className="poption">Me Gusta</p>
         </div>
         <div className="replies">
           <svg
@@ -74,7 +78,7 @@ function PostList() {
               fill="#F8F8F8"
             />
           </svg>
-          <p>Comment</p>
+          <p className="poption">Comentar</p>
         </div>
       </div>
     </div>

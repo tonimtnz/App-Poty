@@ -98,7 +98,7 @@ button:hover path {
 
 .list_container{
   width: 500px;
-  height: 200px;
+  height: 350px;
   background-color: var(--bg-cards-color);
   border-radius: 10px;
   padding: 2rem;
@@ -136,4 +136,15 @@ button:hover path {
 
 h4{
   margin-top: 0;
+  color: var(--font-main-color);
+}
+
+.poption{
+  margin-top: 0;
+  margin-left: 0.5rem;
+  color: var(--font-main-color);
+}
+
+.comentario{
+  color: var(--font-main-color);
 }
