@@ -46,8 +46,8 @@ function PostList() {
           Quae?
         </p>
       </div>
-      <div className="imagen">
-        <img src={Image} alt="" width={500} height={200}/>
+      <div >
+        <img className="imagen" src={Image} alt="" width={500} height={200}/>
       </div>
       <div className="like_replies">
         <div className="like">
