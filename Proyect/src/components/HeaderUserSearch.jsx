@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { Link } from 'react-router-dom'
+import { ResultCard } from "./ResultCard";
 
 export function HeaderUserSearch(){
     
@@ -9,7 +9,7 @@ export function HeaderUserSearch(){
     async function theUserFetch(){
          
 
-        const url = `https://spotify23.p.rapidapi.com/search/?q=${userSearch}&type=users&offset=0&limit=1&numberOfTopResults=5`
+        const url = `https://spotify23.p.rapidapi.com/search/?q=${userSearch}&type=users&offset=0&limit=5&numberOfTopResults=5`
         const options = {
 	        method: 'GET',
 	        headers: {
@@ -21,7 +21,7 @@ export function HeaderUserSearch(){
         try {
             const response = await fetch(url, options);
             const result = await response.json();
-            setUserData(result.users.items[0])
+            setUserData(result.users.items)
         } catch (error) {
             console.error(error);  
         }
@@ -41,14 +41,18 @@ export function HeaderUserSearch(){
 
     return(
         <form onSubmit={handleSubmit} className="header-user-search-bar">
-            <input onChange={handleSearchUser} placeholder="Username"/>
-            <button onClick={theUserFetch}>Busca un amigo</button>
-            {userData && <div className="userCard">
+            <input onChange={handleSearchUser} placeholder="Nombre de Usuario"/>
+            <button onClick={theUserFetch}>Buscar</button>
+            <ul className="userCard">{userData?.map((user, index) => {
+                return(<ResultCard key={index} result={user}/>) 
+                })} 
+            </ul>
+            {/* {userData && <div className="userCard">
                 <Link className="userCard-button">
                     <img src={userData.data.image.smallImageUrl}/>
                     <h2> {userData.data.displayName}</h2>
                 </Link>
-                </div>}
+                </div>} */}
         </form>
     )
 }

@@ -69,21 +69,24 @@
     transform: scale(1.1);
 }
 .userCard{
+    list-style: none;
+    padding: 0;
     position: absolute;
     left: 17.5%;
     top: 80%;
     display: block;
     background-color: #d9d9d9;
-    width: 21%;
+    width: fit-content;
     display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
+    flex-direction: column;
+    justify-content: start;
     border: 1px solid var(--main-color);
     border-radius: 20px;
     transition: ease-in-out 0.3s;
 }
-.userCard:hover{
-    background-color: var(--emphasis-color);
+.userCard-button:hover{
+    background-color: #00c3ca;
+    cursor: pointer;
 }
 .userCard-button{
     display: flex;
@@ -93,6 +96,8 @@
     padding: 0.5rem 2rem;
     gap: 2rem;
     width: 100%;
+    box-sizing: border-box;
+    border-radius: 20px;
     text-decoration: none;
     color: var(--main-color);
     font-family: var(--font-global);
