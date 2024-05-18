@@ -68,3 +68,41 @@
 #user-button:hover{
     transform: scale(1.1);
 }
+.userCard{
+    position: absolute;
+    left: 17.5%;
+    top: 80%;
+    display: block;
+    background-color: #d9d9d9;
+    width: 21%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    border: 1px solid var(--main-color);
+    border-radius: 20px;
+    transition: ease-in-out 0.3s;
+}
+.userCard:hover{
+    background-color: var(--emphasis-color);
+}
+.userCard-button{
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: center;
+    padding: 0.5rem 2rem;
+    gap: 2rem;
+    width: 100%;
+    text-decoration: none;
+    color: var(--main-color);
+    font-family: var(--font-global);
+
+    img{
+        border-radius: 10px;
+        width: 60px;
+        height: 60px;
+    }
+    h2{
+        margin: 0;
+    }
+}

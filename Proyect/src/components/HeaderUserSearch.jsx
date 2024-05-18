@@ -1,13 +1,15 @@
 import { useEffect, useState } from "react";
+import { Link } from 'react-router-dom'
 
 export function HeaderUserSearch(){
     
-    const [userData, setUserData] = useState({})
+    const [userData, setUserData] = useState()
     const [userSearch, setUserSearch] = useState("")
     
     async function theUserFetch(){
          
-        const url = `https://spotify23.p.rapidapi.com/search/?q=${userSearch}&type=users&offset=0&limit=3&numberOfTopResults=5`
+
+        const url = `https://spotify23.p.rapidapi.com/search/?q=${userSearch}&type=users&offset=0&limit=1&numberOfTopResults=5`
         const options = {
 	        method: 'GET',
 	        headers: {
@@ -19,13 +21,9 @@ export function HeaderUserSearch(){
         try {
             const response = await fetch(url, options);
             const result = await response.json();
-            setUserData(result)
-            if( userData ){
-                console.log(userData)
-            }
+            setUserData(result.users.items[0])
         } catch (error) {
-            console.error(error);
-            
+            console.error(error);  
         }
     }
 
@@ -34,24 +32,23 @@ export function HeaderUserSearch(){
     }
 
 
-    /* useEffect(()=>{
-        if(userSearch){
-            theUserFetch()
+    function handleSubmit(e){
+        e.preventDefault()
+        if(userData){
+            console.log(userData)
         }
-    },[userSearch]) */
+    }
 
     return(
-        <div className="header-user-search-bar">
-            <input onChange={handleSearchUser} placeholder="Spotify Username"/>
+        <form onSubmit={handleSubmit} className="header-user-search-bar">
+            <input onChange={handleSearchUser} placeholder="Username"/>
             <button onClick={theUserFetch}>Busca un amigo</button>
-            { /*<ul className="header-mc-users-list">
-                {userData && userData.map((data) => {
-                    <li key={data.id}>
-                        <h2>{data.displayName}</h2>
-                    </li>
-                })}
-            </ul> */}
-
-        </div>
+            {userData && <div className="userCard">
+                <Link className="userCard-button">
+                    <img src={userData.data.image.smallImageUrl}/>
+                    <h2> {userData.data.displayName}</h2>
+                </Link>
+                </div>}
+        </form>
     )
 }
