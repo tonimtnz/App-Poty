@@ -18,11 +18,11 @@ function PostList() {
 
   function handleMenu(index) {
     const hiddenMenu = document.getElementById(`hiddenmenu-${index}`);
-    const dotIcon = document.getElementById(`doticon-${index}`);
+    // const dotIcon = document.getElementById(`doticon-${index}`);
     hiddenMenu.style.display =
       hiddenMenu.style.display === "flex" ? "none" : "flex";
-    dotIcon.style.display =
-      hiddenMenu.style.display === "flex" ? "none" : "block";
+    // dotIcon.style.display =
+    //   hiddenMenu.style.display === "flex" ? "none" : "block";
   }
 
   return (

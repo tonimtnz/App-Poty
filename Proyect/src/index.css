@@ -180,7 +180,7 @@ h4{
 }
 
 
-.hiddenmenu{
+[class^="hiddenmenu"]{
   display: none;
   flex-direction: column;
   position: absolute;
