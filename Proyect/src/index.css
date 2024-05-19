@@ -172,14 +172,15 @@ h4{
 }
 
 
-#dot_menu{
+[class^="dot_menu"]{
   display: flex;
   flex-direction: row;
   justify-content: end;
   cursor: pointer;
 }
 
-#hiddenmenu{
+
+.hiddenmenu{
   display: none;
   flex-direction: column;
   position: absolute;

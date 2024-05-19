@@ -7,30 +7,33 @@ function PostList() {
   const [comments, setComments] = useState([]);
 
   useEffect(() => {
-    setInterval(()=>{
+    const intervalId = setInterval(() => {
       const savedComments = JSON.parse(localStorage.getItem("comments")) || [];
       setComments(savedComments);
-    },1000)
-    // Load comments from local storage when the component mounts
-    
+    }, 1000);
+
+    // Clear the interval on component unmount
+    return () => clearInterval(intervalId);
   }, []);
 
-  function handleMenu() {
-    const hidden = document.getElementById("hiddenmenu");
-    const dot = document.getElementById("doticon");
-    hidden.style.display = "flex";
-    dot.style.display = "none";
+  function handleMenu(index) {
+    const hiddenMenu = document.getElementById(`hiddenmenu-${index}`);
+    const dotIcon = document.getElementById(`doticon-${index}`);
+    hiddenMenu.style.display =
+      hiddenMenu.style.display === "flex" ? "none" : "flex";
+    dotIcon.style.display =
+      hiddenMenu.style.display === "flex" ? "none" : "block";
   }
 
   return (
     <div className="comments_container">
-      {comments.map((comment, key) => {
+      {comments.map((comment, index) => {
         return (
-          <div className="list_container">
-            <div className="comentario" key={key}>
-              <div id="dot_menu" onClick={handleMenu}>
+          <div className="list_container" key={index}>
+            <div className="comentario">
+              <div className={`dot_menu-${index}`} onClick={() => handleMenu(index)}>
                 <svg
-                  id="doticon"
+                  id={`doticon-${index}`}
                   width="18"
                   height="4"
                   viewBox="0 0 18 4"
@@ -45,7 +48,7 @@ function PostList() {
                     stroke-linejoin="round"
                   />
                 </svg>
-                <div id="hiddenmenu">
+                <div id={`hiddenmenu-${index}`} className="hiddenmenu">
                   <div className="editarmenu">
                     <svg
                       width="46"
