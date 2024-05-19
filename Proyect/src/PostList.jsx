@@ -7,9 +7,12 @@ function PostList() {
   const [comments, setComments] = useState([]);
 
   useEffect(() => {
+    setInterval(()=>{
+      const savedComments = JSON.parse(localStorage.getItem("comments")) || [];
+      setComments(savedComments);
+    },1000)
     // Load comments from local storage when the component mounts
-    const savedComments = JSON.parse(localStorage.getItem("comments")) || [];
-    setComments(savedComments);
+    
   }, []);
 
   function handleMenu() {
