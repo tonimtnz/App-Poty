@@ -35,25 +35,7 @@ button {
   justify-content: center;
 }
 
-.button_post{
-  background-color: #009418;
-  font-family: var(--font-global);
-  color: white;
-  font-weight: 500;
-  font-size: 1rem;
-  border-radius: 50px;
-  border: none;
-  padding: 8px 24px;
-  display: flex;
-  flex-direction: row;
-  gap: 0.5rem;
-  align-items: center;
-  cursor: pointer;
-  transition: all ease-in-out 0.3s;
-  justify-content: center;
-  margin-top: 25px;
-  margin-left: 400px;
-}
+
 
 button path {
   transition: all ease-in-out 0.3s;
@@ -67,6 +49,9 @@ button:hover {
 button:hover path {
   fill: var(--font-main-color);
 }
+
+
+
 
 .form_input{
   width: 100%;
@@ -100,18 +85,14 @@ button:hover path {
 
 .list_container{
   width: 500px;
-  height: 370px;
+  height: 390px;
   background-color: var(--bg-cards-color);
   border-radius: 10px;
   padding: 2rem;
   margin-top: 2rem;
 }
 
-.dot_menu{
-  display: flex;
-  flex-direction: row;
-  justify-content: end;
-}
+
 
 .name_image{
   display: flex;
@@ -120,7 +101,7 @@ button:hover path {
 
 .comment_post{
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
 }
 
 .like_replies{
@@ -156,3 +137,76 @@ h4{
   margin-left: -31px;
   width: 562px;
 } */
+
+.button_post{
+  background-color: #009418;
+  font-family: var(--font-global);
+  color: white;
+  font-weight: 500;
+  font-size: 1rem;
+  border-radius: 50px;
+  border: none;
+  padding: 8px 24px;
+  display: flex;
+  flex-direction: row;
+  gap: 0.5rem;
+  align-items: center;
+  cursor: pointer;
+  transition: all ease-in-out 0.3s;
+  justify-content: center;
+  margin-top: 25px;
+  margin-left: 400px;
+}
+
+.button_post path {
+  transition: all ease-in-out 0.3s;
+}
+
+.button_post:hover {
+  background-color: var(--second-color);
+  color: var(--font-main-color);
+}
+
+.button_post:hover path {
+  fill: var(--font-main-color);
+}
+
+
+#dot_menu{
+  display: flex;
+  flex-direction: row;
+  justify-content: end;
+  cursor: pointer;
+}
+
+#hiddenmenu{
+  display: none;
+  flex-direction: column;
+  position: absolute;
+  width: 150px;
+  height: 100px;
+  background-color: #D9D9D9;
+  border-radius: 0.7rem;
+}
+
+.editarmenu{
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+}
+
+.eliminarmenu{
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+}
+
+.comments_container{
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.textocomment{
+  color: black;
+}
