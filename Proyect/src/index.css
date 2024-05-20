@@ -85,7 +85,7 @@ button:hover path {
 
 .list_container{
   width: 500px;
-  height: 390px;
+  height: 350px;
   background-color: var(--bg-cards-color);
   border-radius: 10px;
   padding: 2rem;
@@ -188,6 +188,7 @@ h4{
   height: 100px;
   background-color: #D9D9D9;
   border-radius: 0.7rem;
+  margin-right: 10px;
 }
 
 .editarmenu{
