@@ -25,6 +25,22 @@ function PostList() {
     //   hiddenMenu.style.display === "flex" ? "none" : "block";
   }
 
+  function handleEdit(index) {
+    const newComment = prompt("Edit your comment:", comments[index]);
+    if (newComment) {
+      const updatedComments = [...comments];
+      updatedComments[index] = newComment;
+      localStorage.setItem("comments", JSON.stringify(updatedComments));
+      setComments(updatedComments);
+    }
+  }
+
+  function handleDelete(index) {
+    const updatedComments = comments.filter((_, i) => i !== index);
+    localStorage.setItem("comments", JSON.stringify(updatedComments));
+    setComments(updatedComments);
+  }
+
   return (
     <div className="comments_container">
       {comments.map((comment, index) => {
@@ -49,7 +65,7 @@ function PostList() {
                   />
                 </svg>
                 <div id={`hiddenmenu-${index}`} className="hiddenmenu">
-                  <div className="editarmenu">
+                  <div className="editarmenu" onClick={() => handleEdit(index)}>
                     <svg
                       width="46"
                       height="46"
@@ -74,7 +90,7 @@ function PostList() {
                     </svg>
                     <p className="textocomment">Editar</p>
                   </div>
-                  <div className="eliminarmenu">
+                  <div className="eliminarmenu" onClick={() => handleDelete(index)}>
                     <svg
                       width="46"
                       height="46"
