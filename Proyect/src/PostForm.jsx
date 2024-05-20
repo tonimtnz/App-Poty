@@ -6,10 +6,13 @@ function PostForm() {
 
   // Load comments from localStorage when the component mounts
   useEffect(() => {
-    const savedComments = localStorage.getItem('comments');
-    if (savedComments) {
-      setComments(JSON.parse(savedComments));
-    }
+    const intervalId = setInterval(() => {
+      const savedComments = JSON.parse(localStorage.getItem("comments")) || [];
+      setComments(savedComments);
+    }, 1000);
+
+    // Clear the interval on component unmount
+    return () => clearInterval(intervalId);
   }, []);
 
   function handleChange(event) {
