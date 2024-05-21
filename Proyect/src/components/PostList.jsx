@@ -1,5 +1,5 @@
 import React from "react";
-import Image from "./assets/imagen.jpg";
+import Image from "../assets/imagen.jpg";
 import { useState } from "react";
 import { useEffect } from "react";
 
