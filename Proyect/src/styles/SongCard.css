@@ -1,15 +1,27 @@
+* {
+  box-sizing: border-box;
+}
+
 .cards-container {
   display: grid;
-  grid-template-columns: repeat(6, 1fr);
+  grid-template-columns: repeat(4, 1fr);
 }
 
 .card {
   /* width: 320px; */
   margin: 0.25rem;
   padding: 0.5rem;
-  background-color: #f2f2f2;
+  background-color: transparent;
+  color: #ffffff;
   font-family: Poppins;
   border-radius: 12px;
+  transition: all ease-in-out 0.3s;
+}
+
+.card:hover {
+  background-color: #4c4c4c;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
 }
 
 .img-btn-section {
@@ -19,6 +31,9 @@
 
 .song-img {
   width: 100%;
+  /* max-width: 220px; */
+  height: 220px;
+  object-fit: cover;
   border-radius: 8px;
 }
 
@@ -26,9 +41,111 @@
   position: absolute;
   bottom: 20px;
   right: 20px;
+  width: 40px;
+  height: 40px;
+  padding: 0;
+}
+
+.playBtn svg {
+  padding-left: 2px;
+  path {
+    fill: #005d65;
+  }
 }
 
 h4,
 h5 {
   margin: 0;
+}
+
+.music-hero {
+  width: 100%;
+  height: 280px;
+  background: url(../assets/bg-picture-music-release-section.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 1rem;
+  display: flex;
+  align-items: start;
+  justify-content: center;
+  flex-direction: column;
+  font-family: Poppins;
+
+  h2 {
+    font-size: 4rem;
+    margin: 0;
+    color: #ffffff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  }
+
+  p {
+    color: #ffffff;
+    margin: 0;
+    padding: 0;
+
+    span {
+      /* background-color: aqua;
+      padding: 0.25rem 0.5rem;
+      color: #005d65; */
+      font-weight: 700;
+    }
+  }
+}
+
+.content-container {
+  display: flex;
+  flex-direction: row;
+  padding: 1rem;
+  gap: 1rem;
+}
+
+/* LATERAL PLAYING SONG */
+
+.lateral-main-container {
+  position: sticky;
+  top: 0;
+  width: 35%;
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding-top: 0.25rem;
+}
+
+.lateral-player-container {
+  width: 100%;
+  height: fit-content;
+  background-color: transparent;
+  border-radius: 20px;
+}
+
+/* 
+MEDIAQUERIES */
+
+@media (max-width: 375px) {
+  .content-container {
+    flex-direction: column;
+  }
+  .cards-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .lateral-main-container {
+    width: 100%;
+    height: fit-content;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+  }
+  .song-img {
+    height: 150px;
+  }
+  .lateral-player-container iframe {
+    width: 375px;
+    height: 120px !important;
+  }
+
+  .dislaimer-container {
+    display: none;
+  }
 }

@@ -1,0 +1,10 @@
+.dislaimer-container {
+  background-color: rgb(16, 16, 16);
+  color: #ffffff;
+  font-family: Poppins;
+  padding: 1rem;
+  border-radius: 20px;
+  p {
+    font-size: 0.75rem;
+  }
+}
