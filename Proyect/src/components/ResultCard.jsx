@@ -1,6 +1,10 @@
 import { Link } from 'react-router-dom'
 
+
 export function ResultCard({result}){
+
+    const id = result.data.id
+    const img = result.data.image.smallImageUrl
 
     return(
         <li >

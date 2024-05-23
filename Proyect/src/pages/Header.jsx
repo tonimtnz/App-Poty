@@ -4,7 +4,9 @@ import { UserSettings } from "../components/UserSettings";
 import "../styles/header.css"
 
 
+
 export function Header() {
+
   return (
     <header>
         <div className="header-mc">
@@ -13,9 +15,9 @@ export function Header() {
           <HeaderUserSearch/>
         </div>
         <div className="header-mc-right">
-          <UserSettings/>
+        <UserSettings/>
         </div>
-      </div> 
+        </div> 
     </header>
   )
 }

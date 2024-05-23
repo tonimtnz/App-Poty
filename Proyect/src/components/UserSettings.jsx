@@ -1,17 +1,30 @@
+import { useContext, useState } from "react";
 import { UserLogo } from "./UserLogo";
-import { HeaderUserSettings } from "./HeaderUserSettings"
+import { HeaderUserData } from "./HeaderUserData";
+import { useGetUserData } from "./useGetUserData";
+import { UserContext } from "../context/userContext";
 
-export function UserSettings(){
+export function UserSettings({}) {
+  const [toggle, setToggle] = useState(false);
+  /* const {username, userData, error, loading, GetUserData} = useGetUserData() */
 
-    function handleShowSettigns(){
-        const headerHiddenMenu = document.getElementsByClassName('header-mc-hidden')
-        headerHiddenMenu.className = 'header-mc-shown'
-    }
+  const {user, setUser} = useContext(UserContext);
 
-    return(
-        <div>
-            <HeaderUserSettings/>
-            <button onClick={handleShowSettigns} id="user-button"><UserLogo/></button>
+  function handleShowSettigns() {
+    setToggle(!toggle);
+  }
+
+  return (
+    <div>
+      <button onClick={handleShowSettigns} id="user-button">
+        <UserLogo />
+      </button>
+      <section className={toggle ? "header-mc-shown" : "header-mc-hidden"}>
+        <div className="header-mc-user-menu">
+            <button onClick={handleShowSettigns} id="header-mc-user-settings-close">X</button>
+            <HeaderUserData userName={user.name} userImg={user.image_url}/>             
         </div>
-    )
+      </section>
+    </div>
+  );
 }

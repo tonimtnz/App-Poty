@@ -8,12 +8,12 @@
 
   --font-global: "Poppins";
 }
-
 body {
   background-color: var(--main-color);
   width: 100%;
   margin: 0 auto;
   padding: 0;
+  scrollbar-color: var(--emphasis-color);
 }
 
 button {

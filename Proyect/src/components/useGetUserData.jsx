@@ -1,15 +1,18 @@
-import { useState } from "react"
+import { useContext, useState } from "react"
+import { UserContext } from "../context/userContext"
 
 export function useGetUserData(){
 
+    const {user, setUser} = useContext(UserContext)
     const [username, setUsername] = useState("")
     const [userData, setUserData] = useState([{}])
     const [error, setError] = useState(null)
     const [loading, setLoading] = useState(true)
 
-    async function GetUserData(){
 
-        const url = `https://spotify23.p.rapidapi.com/user_profile/q=${username}&playlistLimit=9&artistLimit=10`
+    async function GetUserData(userName){
+
+        const url = `https://spotify23.p.rapidapi.com/user_profile/?id=${userName}&playlistLimit=9&artistLimit=10`
         const options = {
 	        method: 'GET',
 	        headers: {
@@ -22,14 +25,15 @@ export function useGetUserData(){
             const response = await fetch(url, options);
             const result = await response.json();
             setLoading(false)
-            setUserData(result)
-        } catch(error){
+            setUser(result)
+        } catch(er){
             setError(true)
+            console.log(er)
         }
-        console.log(userData)
+        console.log(user)
 
     }
 
 
-    return {}
+    return {username, userData, error, loading, GetUserData}
 }
