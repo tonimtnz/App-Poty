@@ -37,9 +37,11 @@
   }
   
   .fondo_imagen{
+    display: flex;
+    justify-content: center;
     background-color: var(--font-main-color);
-    width: 27px;
-    height: 36px;
+    width: 40px;
+    height: 40px;
     border-radius: 50px;
   }
   
@@ -150,10 +152,11 @@
     flex-direction: column;
     position: absolute;
     width: 150px;
-    height: 100px;
+    height: 110px;
     background-color: #D9D9D9;
     border-radius: 0.7rem;
     margin-right: 10px;
+    padding: 0.5rem;
   }
   
   .editarmenu{
