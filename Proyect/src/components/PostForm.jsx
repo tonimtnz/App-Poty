@@ -2,7 +2,10 @@ import React, { useState, useEffect } from 'react';
 
 function PostForm() {
   const [comment, setComment] = useState('');
-  const [comments, setComments] = useState([]);
+  const [comments, setComments] = useState([{
+    post:'',
+    date: new Date()
+  }]);
 
   // Load comments from localStorage when the component mounts
   useEffect(() => {
@@ -22,7 +25,14 @@ function PostForm() {
   function handleForm(event) {
     event.preventDefault();
     if (comment.trim()) {
-      const newComments = [...comments, comment];
+      const newComment = {
+        post: comment,
+        date: new Date()
+      };
+      const newComments = [...comments, newComment];
+      newComments.sort((a, b) => {
+        return new Date(b.date) - new Date(a.date);
+      });
       setComments(newComments);
       localStorage.setItem('comments', JSON.stringify(newComments));
       setComment('');

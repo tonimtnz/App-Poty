@@ -4,7 +4,10 @@ import { useState } from "react";
 import { useEffect } from "react";
 
 function PostList() {
-  const [comments, setComments] = useState([]);
+  const [comments, setComments] = useState([{
+    post:'',
+    date: new Date()
+  }]);
 
   useEffect(() => {
     const intervalId = setInterval(() => {
@@ -127,7 +130,7 @@ function PostList() {
                 <h4>Username</h4>
               </div>
               <div className="comment_post">
-                <p className="comentario">{comment}</p>
+                <p className="comentario">{comment.post}</p>
               </div>
               <div>
                 <img
