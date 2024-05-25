@@ -29,10 +29,11 @@ function PostList() {
   }
 
   function handleEdit(index) {
-    const newComment = prompt("Edit your comment:", comments[index]);
-    if (newComment) {
-      const updatedComments = [...comments];
-      updatedComments[index] = newComment;
+    const newCommentText = prompt("Edit your comment:", comments[index].post);
+    if (newCommentText) {
+      const updatedComments = comments.map((comment, i) => 
+        i === index ? { ...comment, post: newCommentText, date: new Date() } : comment
+      );
       localStorage.setItem("comments", JSON.stringify(updatedComments));
       setComments(updatedComments);
     }
