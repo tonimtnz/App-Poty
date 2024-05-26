@@ -1,17 +1,15 @@
-import React from 'react'
+import React, { useState } from 'react'
 
 function OlvidoContraseña() {
+  const [display,setDisplay] = useState(true)
+
+  function handleDisplay() {
+    setDisplay(!display)
+  }
+
   return (
-    <div className='div-olvido'>
-        <form className='olvido-form'>
-          <p>Correo</p>
-          <input type="text" />
-          <p>Nueva contraseña</p>
-          <input type="text" />
-          <p>Repite la nueva contraseña</p>
-          <input type="text" />
-        </form>
-    </div>
+      <div className='div-olvido'>
+ </div>
   )
 }
 

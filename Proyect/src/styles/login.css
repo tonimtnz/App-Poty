@@ -11,6 +11,7 @@
 
   body{
     margin: 0;
+    font-family: var(--font-global);
   }
 
 .bg-image{
@@ -41,7 +42,7 @@
 .form-login{
     width: 40%;
     height: 80%;
-    max-height: 459.81px;
+    max-height: 500.81px;
     background-color: var(--bg-cards-color);
     display: flex;
     flex-direction: column;
@@ -49,18 +50,29 @@
 }
 
 .input-login{
-    height: 40px;
-    margin-left: 25%;
-    width: 50%;
+    height: 50px;
+    margin-left: 15%;
+    padding-left: 10px;
+    width: 70%;
     border-radius: 25px;
     background-color: var(--font-main-color);
     border: none;
 }
 
+.input-login-error{
+    height: 50px;
+    margin-left: 15%;
+    padding-left: 10px;
+    width: 70%;
+    border-radius: 25px;
+    background-color: var(--font-main-color);
+    border: 2px solid red;
+}
+
 .input-button{
     border: none;
-    margin: 0 25% 10% 25%;
-    width: 50%;
+    margin: 0 15% 10% 15%;
+    width: 70%;
     border-radius: 25px;
     background-color: #009418;
     color: white;
@@ -68,17 +80,18 @@
 }
 
 .login-p{
-    margin-left: 25%;
+    margin-left: 15%;
     color: var(--font-main-color);
 }
 
 .login-h{
+    margin-top: 51.100px;
     margin-left: 40%;
     color: var(--font-main-color);
 }
 
 .olvide-p{
-    margin: 5% 25% 5% 25%;
+    margin: 5% 25% 5% 15%;
     color: var(--font-main-color);
     cursor: pointer;
 }
@@ -90,20 +103,35 @@
 
 .div-olvido{
     position: absolute;
-    top: 30%;
-    left: 40%;
-    background-color: white;
-    width: 300px;
-    height: 300px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    top: 20%;
+    left: 35%;
+    width: 400px;
+    height: 450px;
+    background-color: var(--bg-cards-color);
+    border-radius: 15px;
+    border: white 1px solid;
 }
 
-.div-olvido p{
-    margin: 0;
+.olvido-form{
+    height: 100%;
+    padding-top: 5%;
 }
 
-.div-displayNone{
-    display: none;
+.div-olvido svg{
+    height: 20px;
+    position: absolute;
+    top: 25px;
+    left: 260px;
+    cursor: pointer;
+    z-index: 10;
+}
+
+.input-button-confirmar{
+    border: none;
+    margin: 10% 15% 10% 15%;
+    width: 70%;
+    border-radius: 25px;
+    background-color: #009418;
+    color: white;
+    height: 40px;
 }
