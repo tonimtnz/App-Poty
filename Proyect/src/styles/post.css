@@ -45,7 +45,7 @@
     border-radius: 50px;
   }
   
-  .parte_superior{
+  .parte_superior_form{
     display: flex;
     gap: 1.5rem;
   }
@@ -88,6 +88,7 @@
   h4{
     margin-top: 0;
     color: var(--font-main-color);
+    padding-top: 0.5rem;
   }
   
   .poption{
@@ -140,9 +141,6 @@
   
   
   [class^="dot_menu"]{
-    display: flex;
-    flex-direction: row;
-    justify-content: end;
     cursor: pointer;
   }
   
@@ -179,4 +177,10 @@
   
   .textocomment{
     color: black;
+  }
+
+  .parte_superior{
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
   }
