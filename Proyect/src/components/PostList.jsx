@@ -20,12 +20,12 @@ function PostList() {
   }, []);
 
   function handleMenu(index) {
-    const hiddenMenu = document.getElementById(`hiddenmenu-${index}`);
-    // const dotIcon = document.getElementById(`doticon-${index}`);
-    hiddenMenu.style.display =
-      hiddenMenu.style.display === "flex" ? "none" : "flex";
-    // dotIcon.style.display =
-    //   hiddenMenu.style.display === "flex" ? "none" : "block";
+    const hiddenMenus = document.getElementsByClassName(`hiddenmenu-${index}`);
+    for (let i = 0; i < hiddenMenus.length; i++) {
+      const hiddenMenu = hiddenMenus[i];
+      hiddenMenu.style.display =
+        hiddenMenu.style.display === "flex" ? "none" : "flex";
+    }
   }
 
   function handleEdit(index) {
@@ -69,7 +69,7 @@ function PostList() {
                       strokeLinejoin="round"
                     />
                   </svg>
-                  <div id={`hiddenmenu-${index}`} className="hiddenmenu">
+                  <div className={`hiddenmenu-${index}`}>
                     <div className="editarmenu" onClick={() => handleEdit(index)}>
                       <svg
                         className="svgeditar"
