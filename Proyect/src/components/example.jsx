@@ -1,1 +1,0 @@
-//Esto es un ejemplo para que se suba la tarjeta
