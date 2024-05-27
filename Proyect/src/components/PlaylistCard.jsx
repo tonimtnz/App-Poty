@@ -9,7 +9,6 @@ export function PlaylistCard({ playlistInfo }) {
 
   const image_id = getImageId(playlistInfo);
 
-  console.table(image_id);
   return (
     <>
       <div className="playlist-card">
