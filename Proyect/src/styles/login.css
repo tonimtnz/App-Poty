@@ -5,7 +5,7 @@
     --font-main-color: #ffffff;
     --font-second-color: #04faf6;
     --emphasis-color: #00f7ff;
-  
+
     --font-global: "Poppins";
   }
 
@@ -20,6 +20,10 @@
     height: 100vh;
     width: 100vw;
     background-size: cover;
+}
+
+.login-logo{
+    margin: 20px 0 0 20px;
 }
 
 .login-h1{
@@ -74,9 +78,13 @@
     margin: 0 15% 10% 15%;
     width: 70%;
     border-radius: 25px;
-    background-color: #009418;
-    color: white;
+    background-color: var(--font-second-color);
+    color: var(--main-color);
     height: 40px;
+}
+
+.input-button:hover{
+    background-color: #002E64;
 }
 
 .login-p{
@@ -131,7 +139,76 @@
     margin: 10% 15% 10% 15%;
     width: 70%;
     border-radius: 25px;
-    background-color: #009418;
-    color: white;
+    background-color: var(--font-second-color);
+    color: var(--main-color);
     height: 40px;
+}
+
+.input-button-confirmar:hover{
+    background-color: #002E64;
+}
+
+@media (max-width: 768px){
+    .bg-image{
+        background-image: url(../assets/girlLoginTablet.jpg);
+    }
+    .div-login{
+        margin-top: 15%;
+    }
+    .login-h1{
+        font-size: 2rem;
+    }
+    .form-login{
+        width: 70%;
+    }
+}
+
+@media (max-width: 376px){
+    .bg-image{
+        height: max-content;
+        background-image: url(../assets/girlLoginResponsive.jpg);
+        padding-bottom: 35%;
+    }
+
+    .bg-image svg{
+        height: 70px;
+    }
+
+    .div-login{
+        flex-direction: column;
+        align-items: baseline;
+        padding-left: 10px;
+        gap: 15px;
+    }
+
+    .login-h1{
+        font-size: 2rem;
+        margin: 0;
+        color: var(--font-main-color);
+    }
+
+    .login-h{
+        margin-top: 20px;
+    }
+
+    .input-button{
+        margin-bottom: 20px;
+        background-color: var(--font-second-color);
+        color: var(--main-color);
+    }
+
+    .form-login{
+        width: 95%;
+        height: fit-content;
+    }
+
+    .div-olvido{
+        left: 8%;
+        width: 315px;
+    }
+
+    .div-olvido svg{
+        left: 180px;
+        height: 20px;
+    }
 }

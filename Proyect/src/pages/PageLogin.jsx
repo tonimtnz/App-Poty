@@ -4,7 +4,7 @@ import Login from '../components/Login'
 function PageLogin() {
   return (
     <div className='bg-image'>
-        <svg
+        <svg className='login-logo'
         xmlns="http://www.w3.org/2000/svg"
         width="300"
         zoomAndPan="magnify"
@@ -191,6 +191,7 @@ function PageLogin() {
             </g>
           </g>
         </g>
+        
       </svg>
 
       <Login />
