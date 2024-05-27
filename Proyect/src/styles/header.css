@@ -62,12 +62,12 @@
 }
 .header-mc-user-menu{
     box-sizing: border-box;
-    background-color: var(--second-color);
+    background-color: #161616;
     filter: none;
     overflow: hidden;
     position: relative;
     z-index: 10;
-    width: 20%;
+    width: 20vw;
     height: 100%;
 
     .header-mc-user-menu-data{
