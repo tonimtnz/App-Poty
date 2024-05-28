@@ -7,14 +7,14 @@ export function UserProfileLeft({ data }) {
       <img className="userProfile-img" src={data.image_url} />
       <h4 className="user-title">Perfil de Usuario</h4>
       <h2 className="userProfile-name">{data.name}</h2>
-      <div className="btns-info">
-        <Link>
-          <button className="special-btn">Todas las playlists públicas</button>
-        </Link>
-        <Link>
-          <button className="special-btn">Los artistas más escuchados</button>
-        </Link>
-      </div>
+      <ul className="btns-info">
+        <li>
+          <Link className="special-btn">Todas las playlists públicas</Link>
+        </li>
+        <li>
+          <Link className="special-btn">Los artistas más escuchados</Link>
+        </li>
+      </ul>
     </>
   );
 }

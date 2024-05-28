@@ -13,7 +13,7 @@ export function FetchUserProfileData() {
   const fetcher = (url) => fetch(url, options).then((res) => res.json());
 
   const { data, error } = useSWR(
-    `https://spotify23.p.rapidapi.com/user_profile/?id=llues_mtnz&playlistLimit=6&artistLimit=6`,
+    `https://spotify23.p.rapidapi.com/user_profile/?id=8bg432lwzpyyyhfxbwz2omjau&playlistLimit=20&artistLimit=20`,
     fetcher
   );
 
