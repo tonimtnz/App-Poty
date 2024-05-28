@@ -60,7 +60,7 @@
     display: flex;
     justify-content: center;
     background-color: var(--font-main-color);
-    width: 40px;
+    width: 50px;
     height: 40px;
     border-radius: 50px;
   }
@@ -176,6 +176,7 @@
     margin-right: 10px;
     padding: 0.5rem;
     z-index: 20;
+    margin-left: -150px;
   }
   
   .editarmenu{
