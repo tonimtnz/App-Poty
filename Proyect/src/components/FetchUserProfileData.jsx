@@ -1,7 +1,9 @@
 import useSWR from "swr";
+import { useParams } from "react-router-dom";
 import { UserProfile } from "../pages/UserProfile";
 
 export function FetchUserProfileData() {
+  const { user_id } = useParams();
   const options = {
     method: "GET",
     headers: {
@@ -13,7 +15,7 @@ export function FetchUserProfileData() {
   const fetcher = (url) => fetch(url, options).then((res) => res.json());
 
   const { data, error } = useSWR(
-    `https://spotify23.p.rapidapi.com/user_profile/?id=8bg432lwzpyyyhfxbwz2omjau&playlistLimit=20&artistLimit=20`,
+    `https://spotify23.p.rapidapi.com/user_profile/?id=${user_id}&playlistLimit=20&artistLimit=20`,
     fetcher
   );
 
