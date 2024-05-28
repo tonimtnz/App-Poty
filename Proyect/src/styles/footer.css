@@ -60,3 +60,9 @@
         }
     }
 }
+@media (max-width: 1025px){
+    .members-list{
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}

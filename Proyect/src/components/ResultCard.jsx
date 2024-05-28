@@ -4,14 +4,15 @@ import { Link } from 'react-router-dom'
 export function ResultCard({result}){
 
     const id = result.data.id
+    const name = result.data.displayName
     const img = result.data.image.smallImageUrl
 
     return(
-        <li >
-                <div className="userCard-button">
-                    <img src={result.data.image.smallImageUrl}/>
-                    <h2> {result.data.displayName}</h2>
-                </div>
+        <li>
+                <Link className="userCard-button">
+                    <img src={img}/>
+                    <h2> {name}</h2>
+                </Link>
         </li>
     )
 }
