@@ -20,12 +20,11 @@ function PostList() {
   }, []);
 
   function handleMenu(index) {
-    const hiddenMenus = document.getElementsByClassName(`hiddenmenu-${index}`);
-    for (let i = 0; i < hiddenMenus.length; i++) {
-      const hiddenMenu = hiddenMenus[i];
-      hiddenMenu.style.display =
-        hiddenMenu.style.display === "flex" ? "none" : "flex";
-    }
+    const hiddenMenu = document.querySelector(`.hiddenmenu-${index}`);
+    const hiddenDiv = document.querySelector('.div-completo');
+    const isMenuVisible = hiddenMenu.style.display === "flex";
+    hiddenMenu.style.display = isMenuVisible ? "none" : "flex";
+    hiddenDiv.style.display = isMenuVisible ? "none" : "block";
   }
 
   function handleEdit(index) {
@@ -47,6 +46,10 @@ function PostList() {
 
   return (
     <div className="comments_container">
+      <div className="div-completo" onClick={() => {
+        document.querySelectorAll('[class^="hiddenmenu"]').forEach(menu => menu.style.display = 'none');
+        document.querySelector('.div-completo').style.display = 'none';
+      }}></div>
       {comments.map((comment, index) => {
         return (
           <div className="list_container" key={index}>
