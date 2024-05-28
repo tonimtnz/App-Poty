@@ -138,16 +138,7 @@ function PostList() {
               <div className="comment_post">
                 <p className="comentario">{comment.post}</p>
               </div>
-              <div>
-                <img
-                  className="imagen"
-                  src={Image}
-                  alt=""
-                  width={500}
-                  height={200}
-                />
-              </div>
-              <div className="like_replies">
+              {/* <div className="like_replies">
                 <div className="like">
                   <svg
                     width="26"
@@ -178,7 +169,7 @@ function PostList() {
                   </svg>
                   <p className="poption">Comentar</p>
                 </div>
-              </div>
+              </div> */}
             </div>
           </div>
         );
