@@ -1,12 +1,12 @@
 import { useState } from "react";
 
-export function useGetUserId(username){
-
+export function useGetUserId(){
+    const [user, setUser] = useState("")
     const [id, setId] = useState('')
     
         
     async function GetId() {
-        const url = `https://spotify23.p.rapidapi.com/search/?q=${username}&type=users&offset=0&limit=1&numberOfTopResults=5`;
+        const url = `https://spotify23.p.rapidapi.com/search/?q=${user}&type=users&offset=0&limit=1&numberOfTopResults=5`;
         const options = {
             method: "GET",
             headers: {
@@ -25,5 +25,5 @@ export function useGetUserId(username){
     
     }
 
-    return {id, setId, GetId}
+    return { id, setId, user, setUser, GetId }
 }

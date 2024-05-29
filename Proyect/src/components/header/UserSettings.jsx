@@ -14,7 +14,7 @@ export function UserSettings({}) {
   function handleShowSettigns() {
     setToggle(!toggle);
     if (state === false) {
-      GetUserData("llues_mtnz");
+      GetUserData();
     }
     setState(true);
   }

@@ -1,7 +1,13 @@
 import React, { useState } from 'react'
 import OlvidoContraseña from './OlvidoContraseña';
+import { useGetUserId } from '../useGetUserId';
+import { useGetUserData } from '../useGetUserData';
+import { useNavigate } from 'react-router-dom';
 
 function Login() {
+  const navigate = useNavigate()
+  const {id, setId, user, setUser, GetId} = useGetUserId()
+  const {username, userData, _error, loading, GetUserData} = useGetUserData()
   const [error,setError] = useState(false)
   const [toggle, setToggle] = useState(false)
   const [clave, setClave] = useState("hola")
@@ -10,11 +16,26 @@ function Login() {
   function handleForm(event) {
     event.preventDefault()
     if (event.target.contraseña.value === clave) {
-      console.log("contraseña correcta");
-      setError(false)
-    } else {
-      setError(true)
+        console.log("contraseña correcta"); 
+      try{
+          GetId().then(() => {
+          setError(false)
+          console.log(id)
+          GetUserData(id)
+  /*      navigate (`/home`)
+   */     })
+      }catch(error){
+        console.error(error)
+      }
+    }else{    
+    setError(true)
     }
+
+}
+        
+
+  function handleName(e){
+    setUser(e.target.value)
   }
 
   function handleOlvido() {
@@ -42,7 +63,7 @@ function Login() {
           <form className='form-login' title='Login' onSubmit={handleForm}>
             <div>
               <label className='login-p' htmlFor='user-field'>Usuario o Correo</label>
-              <input type="text" className='input-login' id='user-field'/>
+              <input type="text" className='input-login' id='user-field' value={user} onChange={handleName}/>
             </div>
             <div>
               <label className='login-p' htmlFor='contraseña-field'>Contraseña {error && <span className='error-contraseña'>Contraseña incorrecta</span>}</label>

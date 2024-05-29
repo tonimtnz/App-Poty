@@ -4,7 +4,7 @@ import { Routes, Route } from "react-router-dom";
 import { Footer } from "./pages/Footer";
 import { Header } from "./pages/Header";
 
-import Login from "./components/Login";
+import Login from "./components/login/Login";
 import PageLogin from "./pages/PageLogin";
 
 
@@ -15,7 +15,7 @@ function App() {
     <>
       <Header />
       <Routes>
-        <Route path="/" element ={<PageLogin/>}/>
+        <Route path="/login" element ={<PageLogin/>}/>
         <Route path="/users/:userId" element={<FetchUserProfileData />} />
       </Routes>
       <Footer />
