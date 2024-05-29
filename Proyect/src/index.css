@@ -49,3 +49,7 @@ button:hover {
 button:hover path {
   fill: var(--font-main-color);
 }
+
+*{
+  box-sizing: border-box;
+}
