@@ -16,10 +16,7 @@ function App() {
     <>
       <Header />
       <Routes>
-        <Route
-          path="/user_profile/:userId"
-          element={<FetchUserProfileData />}
-        />
+        <Route path="/users/:userId" element={<FetchUserProfileData />} />
       </Routes>
       <Footer />
     </>

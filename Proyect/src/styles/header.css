@@ -73,7 +73,7 @@ header {
 }
 .header-mc-user-menu {
   box-sizing: border-box;
-  background-color: #161616;
+  background-color: #001e3f;
   filter: none;
   overflow: hidden;
   position: relative;
@@ -84,9 +84,9 @@ header {
 
   .header-mc-user-menu-data {
     box-sizing: border-box;
-    border: 2px solid #161616;
+    border: 2px solid #001e3f;
     border-radius: 10px;
-    background-color: #161616;
+    background-color: #001e3f;
     color: var(--emphasis-color);
     margin: 2.5rem 0.5rem;
     padding-bottom: 1rem;

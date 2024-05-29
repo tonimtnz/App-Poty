@@ -7,7 +7,7 @@ export function ResultCard({ result }) {
   const img = result.data.image.smallImageUrl;
 
   function findUser() {
-    navigate(`/user_profile/${id}`);
+    navigate(`/users/${id}`);
   }
 
   return (
