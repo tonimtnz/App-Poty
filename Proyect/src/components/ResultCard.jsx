@@ -1,6 +1,6 @@
 import { useNavigate } from "react-router-dom";
 
-export function ResultCard({ result }) {
+export function ResultCard({ result, handleClean }) {
   const navigate = useNavigate();
   const id = result.data.id;
   const name = result.data.displayName;
@@ -8,6 +8,7 @@ export function ResultCard({ result }) {
 
   function findUser() {
     navigate(`/users/${id}`);
+    handleClean();
   }
 
   return (

@@ -29,7 +29,6 @@
 .img-container p {
   color: var(--font-main-color);
   font-weight: 500;
-  font-style: italic;
 }
 .userProfile-img {
   border-radius: 12px;

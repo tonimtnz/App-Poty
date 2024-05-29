@@ -35,13 +35,24 @@ export function HeaderUserSearch() {
     }
   }
 
+  function handleClean() {
+    setUserData();
+    setUserSearch("");
+  }
+
   return (
     <form onSubmit={handleSubmit} className="header-user-search-bar">
-      <input onChange={handleSearchUser} placeholder="Nombre de Usuario" />
+      <input
+        onChange={handleSearchUser}
+        placeholder="Nombre de Usuario"
+        value={userSearch}
+      />
       <button onClick={theUserFetch}>Buscar</button>
       <ul className="userCard">
         {userData?.map((user, index) => {
-          return <ResultCard key={index} result={user} />;
+          return (
+            <ResultCard key={index} result={user} handleClean={handleClean} />
+          );
         })}
       </ul>
     </form>
