@@ -10,7 +10,7 @@ export function HeaderUserSearch() {
     const options = {
       method: "GET",
       headers: {
-        "X-RapidAPI-Key": "2feb77fca8msh6c23833207b60d5p177292jsneaf6e08cce77",
+        "X-RapidAPI-Key": "b3f90c1019msh01c2e5a00d38b74p1b3d46jsn18d558416c6f",
         "X-RapidAPI-Host": "spotify23.p.rapidapi.com",
       },
     };
@@ -34,14 +34,19 @@ export function HeaderUserSearch() {
       console.log(userData);
     }
   }
+  function handleClean(){
+    setUserSearch("")
+    setUserData()
+    console.log("borrando info")
+  }
 
   return (
     <form onSubmit={handleSubmit} className="header-user-search-bar">
-      <input onChange={handleSearchUser} placeholder="Nombre de Usuario" />
+      <input onChange={handleSearchUser} placeholder="Nombre de Usuario" value={userSearch}/>
       <button onClick={theUserFetch}>Buscar</button>
       <ul className="userCard">
         {userData?.map((user, index) => {
-          return <ResultCard key={index} result={user} />;
+          return <ResultCard key={index} result={user} handleClean={handleClean} />;
         })}
       </ul>
     </form>

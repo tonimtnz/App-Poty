@@ -1,5 +1,5 @@
 import '../styles/footer.css'
-import { LogoHeader } from "../components/LogoHeader";
+import { LogoHeader } from "../components/header/LogoHeader";
 
 export function Footer(){
 

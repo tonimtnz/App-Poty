@@ -7,15 +7,24 @@
   gap: 2rem;
   padding: 2rem;
 }
-.content-container {
+.content-container-left {
   background-color: #242424;
+  width: 20%;
   padding: 1rem;
   border-radius: 20px;
   height: fit-content;
   position: sticky;
   top: 6rem;
 }
-
+.content-container-right {
+  background-color: #242424;
+  width: 80%;
+  padding: 1rem;
+  border-radius: 20px;
+  height: fit-content;
+  position: sticky;
+  top: 6rem;
+}
 .img-container p {
   color: var(--font-main-color);
   font-weight: 500;
@@ -23,6 +32,7 @@
 }
 .userProfile-img {
   border-radius: 12px;
+  width: 100%;
 }
 
 .btns-info {

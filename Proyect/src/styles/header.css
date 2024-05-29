@@ -4,6 +4,13 @@ header {
   top: 0;
   z-index: 10;
 }
+.to-home{
+  width: fit-content;
+  height: fit-content;
+}
+.to-home:hover{
+  cursor: pointer;
+}
 
 .header-mc {
   display: flex;

@@ -1,4 +1,4 @@
-import { LogoHeader } from './LogoHeader'
+import { LogoHeader } from '../header/LogoHeader'
 
 export function FooterInfo(){
 

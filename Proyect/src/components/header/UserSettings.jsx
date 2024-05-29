@@ -1,8 +1,8 @@
 import { useContext, useState } from "react";
 import { UserLogo } from "./UserLogo";
 import { HeaderUserData } from "./HeaderUserData";
-import { useGetUserData } from "./useGetUserData";
-import { UserContext } from "../context/userContext";
+import { useGetUserData } from "../useGetUserData";
+import { UserContext } from "../../context/userContext";
 
 export function UserSettings({}) {
   const [state, setState] = useState(false);
