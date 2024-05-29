@@ -7,7 +7,17 @@
   gap: 2rem;
   padding: 2rem;
 }
-.content-container {
+.content-container-left {
+  width: 20%;
+  background-color: #242424;
+  padding: 1rem;
+  border-radius: 20px;
+  height: fit-content;
+  position: sticky;
+  top: 6rem;
+}
+.content-container-right {
+  width: 80%;
   background-color: #242424;
   padding: 1rem;
   border-radius: 20px;
@@ -23,6 +33,7 @@
 }
 .userProfile-img {
   border-radius: 12px;
+  width: 100%;
 }
 
 .btns-info {

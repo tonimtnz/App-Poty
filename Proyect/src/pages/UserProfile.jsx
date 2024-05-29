@@ -10,7 +10,7 @@ export function UserProfile({ data }) {
   console.log(data);
   return (
     <div className="userProfile-container">
-      <div className="content-container">
+      <div className="content-container-left">
         <UserProfileLeft data={data} />
         {/* <Routes>
           <Route element={<UserProfile />}>
@@ -19,7 +19,7 @@ export function UserProfile({ data }) {
           </Route>
         </Routes> */}
       </div>
-      <div className="content-container">
+      <div className="content-container-right">
         <UserProfileRight data={data} />
       </div>
     </div>
