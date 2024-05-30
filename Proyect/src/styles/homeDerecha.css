@@ -1,0 +1,46 @@
+:root {
+    --main-color: #363636;
+    --second-color: #005d65;
+    --bg-cards-color: #474e53;
+    --font-main-color: #ffffff;
+    --font-second-color: #04faf6;
+    --emphasis-color: #00f7ff;
+  
+    --font-global: "Poppins";
+  }
+
+.botones-del-home{
+    display: flex;
+    flex-direction: column;
+    width: fit-content;
+    gap: 2rem;
+}
+
+.botones-inferiores{
+    display: flex;
+    justify-content: space-between;
+}
+
+.boton-recomendaciones{
+    width: 360px;
+    height: 100px;
+    background-color: #FF2C2C;
+    color: var(--font-main-color);
+    border-radius: 20px;
+}
+
+.boton-playlist{
+    width: 170px;
+    height: 100px;
+    background-color: #009418;
+    color: var(--font-main-color);
+    border-radius: 20px;
+}
+
+.boton-artista{
+    width: 170px;
+    height: 100px;
+    background-color: #002E64;
+    color: var(--font-main-color);
+    border-radius: 20px;
+}
