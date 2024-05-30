@@ -132,7 +132,10 @@ function PostList() {
                       />
                     </svg>
                   </div>
-                  <h4>Username</h4>
+                  <div className="usuariodate">
+                    <h4>Username</h4>
+                    <p className="date">Date</p>
+                  </div>
                 </div>
               </div>
               <div className="comment_post">
