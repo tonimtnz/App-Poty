@@ -13,10 +13,6 @@ export function UserSettings({}) {
 
   function handleShowSettigns() {
     setToggle(!toggle);
-    if (state === false) {
-      GetUserData();
-    }
-    setState(true);
   }
 
   return (

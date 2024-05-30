@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import OlvidoContraseña from './OlvidoContraseña';
 import { useGetUserId } from '../useGetUserId';
 import { useGetUserData } from '../useGetUserData';
@@ -18,20 +18,25 @@ function Login() {
     if (event.target.contraseña.value === clave) {
         console.log("contraseña correcta"); 
       try{
-          GetId().then(() => {
+          GetId()
           setError(false)
-          console.log(id)
-          GetUserData(id)
-  /*      navigate (`/home`)
-   */     })
+       
       }catch(error){
         console.error(error)
       }
     }else{    
-    setError(true)
+      setError(true)
     }
-
-}
+    
+  }
+  
+  useEffect(() => {
+    if(id){
+      GetUserData(id)
+      console.log(id)
+      navigate ('/home')
+  }
+}, [id])
         
 
   function handleName(e){

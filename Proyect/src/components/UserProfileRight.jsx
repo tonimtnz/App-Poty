@@ -27,7 +27,7 @@ export function UserProfileRight({ data }) {
         </div>
 
         <div className="playlists_public-container">
-          {data.public_playlists.slice(0, 4).map((playlistInfo, index) => {
+          {data.public_playlists && data.public_playlists.slice(0, 4).map((playlistInfo, index) => {
             return <PlaylistCard key={index} playlistInfo={playlistInfo} />;
           })}
         </div>
@@ -36,7 +36,7 @@ export function UserProfileRight({ data }) {
           <Link className="enlace-userProfile">Ver Todos 👉</Link>
         </div>
         <div className="recent_artist-container">
-          {data.recently_played_artists
+          {data.recently_played_artists && data.recently_played_artists
             .slice(0, 4)
             .map((recentArtistInfo, index) => {
               return (

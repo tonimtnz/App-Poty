@@ -55,6 +55,7 @@ header {
   input:focus {
     border: 2px solid var(--font-main-color);
     color: var(--font-main-color);
+    outline: none;
   }
   button {
     transform: translateX(-35px);

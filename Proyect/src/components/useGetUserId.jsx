@@ -2,7 +2,7 @@ import { useState } from "react";
 
 export function useGetUserId(){
     const [user, setUser] = useState("")
-    const [id, setId] = useState('')
+    const [id, setId] = useState("")
     
         
     async function GetId() {

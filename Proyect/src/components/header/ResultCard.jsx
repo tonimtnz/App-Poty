@@ -4,7 +4,7 @@ export function ResultCard({ result, handleClean }) {
   const navigate = useNavigate();
   const id = result.data.id;
   const name = result.data.displayName;
-  const img = result.data.image.smallImageUrl;
+  const img = result.data.image.smallImageUrl || '.../assets/fav.png' ;
 
   function findUser() {
     navigate(`/users/${id}`);

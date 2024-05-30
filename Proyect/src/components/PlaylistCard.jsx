@@ -12,14 +12,14 @@ export function PlaylistCard({ playlistInfo }) {
   return (
     <>
       <div className="playlist-card">
-        <img
+        {image_id && <img
           className="img-playlist"
           src={
             image_id.length > 22
               ? `https://mosaic.scdn.co/300/${image_id}`
               : `https://i.scdn.co/image/${image_id}`
           }
-        />
+        />}
         <h4>{playlistInfo.name}</h4>
       </div>
     </>
