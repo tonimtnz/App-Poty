@@ -1,0 +1,18 @@
+.placeholder-div {
+  background-color: #727272;
+  color: #ffffff;
+  font-family: "Poppins";
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+  padding: 2rem 0;
+  border-radius: 20px;
+  height: 352px;
+}
+
+.placeholder-img-recommendedMusic {
+  border-radius: 100%;
+  width: 140px;
+}
