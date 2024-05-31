@@ -34,7 +34,7 @@ function Login() {
     if(id){
       GetUserData(id)
       console.log(id)
-      navigate ('/home')
+      navigate ('/')
   }
 }, [id])
         

@@ -18,6 +18,7 @@ function App() {
     <>
       {!isLoginPage && <Header />}
       <Routes>
+        <Route path="/" element={<h1>Holita</h1>}/>
         <Route path="/login" element ={<PageLogin/>}/>
         <Route path="/users/:userId" element={<FetchUserProfileData />} />
       </Routes>
