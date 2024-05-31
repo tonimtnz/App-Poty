@@ -1,18 +1,24 @@
 import React from "react";
-import Image from "../assets/imagen.jpg";
 import { useState } from "react";
 import { useEffect } from "react";
 
 function PostList() {
-  const [comments, setComments] = useState([{
-    post:'',
-    date: new Date()
-  }]);
+  const [comments, setComments] = useState([
+    {
+      post: "",
+      date: new Date(),
+    },
+  ]);
 
   useEffect(() => {
     const intervalId = setInterval(() => {
       const savedComments = JSON.parse(localStorage.getItem("comments")) || [];
-      setComments(savedComments);
+      // Convert date strings back to Date objects
+      const commentsWithDates = savedComments.map((comment) => ({
+        ...comment,
+        date: new Date(comment.date),
+      }));
+      setComments(commentsWithDates);
     }, 1000);
 
     // Clear the interval on component unmount
@@ -21,7 +27,7 @@ function PostList() {
 
   function handleMenu(index) {
     const hiddenMenu = document.querySelector(`.hiddenmenu-${index}`);
-    const hiddenDiv = document.querySelector('.div-completo');
+    const hiddenDiv = document.querySelector(".div-completo");
     const isMenuVisible = hiddenMenu.style.display === "flex";
     hiddenMenu.style.display = isMenuVisible ? "none" : "flex";
     hiddenDiv.style.display = isMenuVisible ? "none" : "block";
@@ -30,8 +36,10 @@ function PostList() {
   function handleEdit(index) {
     const newCommentText = prompt("Edit your comment:", comments[index].post);
     if (newCommentText) {
-      const updatedComments = comments.map((comment, i) => 
-        i === index ? { ...comment, post: newCommentText, date: new Date() } : comment
+      const updatedComments = comments.map((comment, i) =>
+        i === index
+          ? { ...comment, post: newCommentText, date: new Date() }
+          : comment
       );
       localStorage.setItem("comments", JSON.stringify(updatedComments));
       setComments(updatedComments);
@@ -46,16 +54,24 @@ function PostList() {
 
   return (
     <div className="comments_container">
-      <div className="div-completo" onClick={() => {
-        document.querySelectorAll('[class^="hiddenmenu"]').forEach(menu => menu.style.display = 'none');
-        document.querySelector('.div-completo').style.display = 'none';
-      }}></div>
+      <div
+        className="div-completo"
+        onClick={() => {
+          document
+            .querySelectorAll('[class^="hiddenmenu"]')
+            .forEach((menu) => (menu.style.display = "none"));
+          document.querySelector(".div-completo").style.display = "none";
+        }}
+      ></div>
       {comments.map((comment, index) => {
         return (
           <div className="list_container" key={index}>
             <div className="comentario">
               <div className="parte_superior">
-                <div className={`dot_menu-${index}`} onClick={() => handleMenu(index)}>
+                <div
+                  className={`dot_menu-${index}`}
+                  onClick={() => handleMenu(index)}
+                >
                   <svg
                     id={`doticon-${index}`}
                     width="18"
@@ -73,7 +89,10 @@ function PostList() {
                     />
                   </svg>
                   <div className={`hiddenmenu-${index}`}>
-                    <div className="editarmenu" onClick={() => handleEdit(index)}>
+                    <div
+                      className="editarmenu"
+                      onClick={() => handleEdit(index)}
+                    >
                       <svg
                         className="svgeditar"
                         width="46"
@@ -99,7 +118,10 @@ function PostList() {
                       </svg>
                       <p className="textocomment">Editar</p>
                     </div>
-                    <div className="eliminarmenu" onClick={() => handleDelete(index)}>
+                    <div
+                      className="eliminarmenu"
+                      onClick={() => handleDelete(index)}
+                    >
                       <svg
                         className="svgeliminar"
                         width="46"
@@ -134,7 +156,17 @@ function PostList() {
                   </div>
                   <div className="usuariodate">
                     <h4>Username</h4>
-                    <p className="date">Date</p>
+                    <p className="date">
+                      {comment.date.toLocaleDateString("en-GB", {
+                        day: "2-digit",
+                        month: "2-digit",
+                        year: "numeric",
+                      })}{" "}
+                      {comment.date.toLocaleTimeString([], {
+                        hour: "2-digit",
+                        minute: "2-digit",
+                      })}
+                    </p>
                   </div>
                 </div>
               </div>
