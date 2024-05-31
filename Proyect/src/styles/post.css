@@ -1,0 +1,240 @@
+
+  .form_input{
+    width: 100%;
+    /* height: 36px; */
+    border-radius: 50px;
+    border: none;
+    padding: 0 1rem;
+    background-color: #D7D7D7;
+  }
+  .home-container{
+    box-sizing: border-box;
+    display: flex;
+    gap: 2rem;
+    flex-direction: row;
+    width: 100%;
+    margin: 0 auto;
+    padding: 2rem;
+    position: relative;
+  }
+  .home-post-container{
+    width: 50%;
+  }
+  .home-buttons-container{
+    width: 50%;
+  }
+  .div-completo {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 5;
+  }
+  
+  .parte_inferior{
+    position: relative;
+    padding: 0;
+    margin: 0;
+  }
+
+  .form_container{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    height: fit-content;
+    background-color: var(--bg-cards-color);
+    border-radius: 20px;
+    padding: 2rem 2rem 3rem 2rem;
+    margin-top: 2rem;
+  }
+  
+  .fondo_imagen{
+    display: flex;
+    justify-content: center;
+    background-color: var(--font-main-color);
+    width: 50px;
+    height: 50px;
+    border-radius: 50px;
+
+    img{
+    border-radius: inherit;      
+    }
+  }
+
+  .fondo_imagen_form{
+    display: flex;
+    background-color: var(--font-main-color);
+    width: 50px;
+    height: 50px;
+    border-radius: 50px;
+    img{
+      width: inherit;
+      height: inherit;
+      border-radius: inherit;
+    }
+  }
+  
+  .parte_superior_form{
+    display: flex;
+    gap: 1.5rem;
+  }
+  
+  .list_container{
+    position: relative;
+    width: 95%;
+    height: fit-content;
+    background-color: var(--bg-cards-color);
+    border-radius: 20px;
+    padding: 1rem 2rem 2rem 2rem;
+    margin: 1rem 0;
+
+
+    h4{
+      margin-top: 0;
+      color: var(--font-main-color);
+    }
+    .comentario{
+      margin: 1rem 0 0 0;
+    }
+  }
+  
+  
+  
+  .name_image{
+    display: flex;
+    gap: 2rem;
+  }
+  
+  .comment_post{
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+  }
+  
+  .like_replies{
+    display: flex;
+    gap: 2rem;
+    margin-top: 1.4rem;
+  }
+  
+  .like{
+    display: flex;
+  }
+  
+  .replies{
+    display: flex;
+  }
+  
+  
+  
+  .poption{
+    margin-top: 0;
+    margin-left: 0.5rem;
+    color: var(--font-main-color);
+  }
+  
+  .comentario{
+    color: var(--font-main-color);
+  }
+  /* 
+  .imagen{
+    margin-left: -31px;
+    width: 562px;
+  } */
+  
+  .button_post{
+    background-color: var(--emphasis-color);
+    font-family: var(--font-global);
+    color: var(--main-color);
+    font-weight: 500;
+    font-size: 1rem;
+    border-radius: 50px;
+    position: absolute;
+    right: 0;
+    border: none;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    cursor: pointer;
+    transition: all ease-in-out 0.3s;
+    transform: translateY(-15px);
+  }
+  
+  .button_post path {
+    transition: all ease-in-out 0.3s;
+    fill: var(--main-color);
+  }
+  
+  .button_post:hover {
+    background-color: var(--second-color);
+    color: var(--font-main-color);
+  }
+  
+  .button_post:hover path {
+    fill: var(--font-main-color);
+  }
+  
+  
+  [class^="dot_menu"]{
+    cursor: pointer;
+  }
+  
+  
+  [class^="hiddenmenu"]{
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    width: 150px;
+    height: 110px;
+    background-color: #D9D9D9;
+    border-radius: 0.7rem;
+    margin-right: 10px;
+    padding: 0.5rem;
+    z-index: 20;
+    margin-left: -150px;
+  }
+  
+  .editarmenu{
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+  }
+  
+  .eliminarmenu{
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+  }
+  
+  .comments_container{
+    width: 100%;
+    height: 800px;
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    overflow-y: scroll;
+  }
+  
+  .textocomment{
+    color: black;
+  }
+
+  .parte_superior{
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+  }
+
+  .usuariodate{
+    display: flex;
+    flex-direction: column;
+  }
+
+  .date{
+    margin: 0;
+    margin-top:-1.5rem
+  }

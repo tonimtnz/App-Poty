@@ -3,27 +3,36 @@ import { Routes, Route, useLocation } from "react-router-dom";
 // import { UserProfile } from "./pages/UserProfile";
 import { Footer } from "./pages/Footer";
 import { Header } from "./pages/Header";
-
-import Login from "./components/login/Login";
 import PageLogin from "./pages/PageLogin";
-
+import { Home } from "./pages/Home";
+import { UserContext } from "./context/userContext";
+import { useContext } from "react";
 
 
 function App() {
-
+  const {user, setUser} = useContext(UserContext)
   const location = useLocation();
-  const isLoginPage = location.pathname === "/login";
+  const isLoginPage = location.pathname === "/";
   
   return (
+
     <>
       {!isLoginPage && <Header />}
-      <Routes>
-        <Route path="/" element={<h1>Holita</h1>}/>
-        <Route path="/login" element ={<PageLogin/>}/>
-        <Route path="/users/:userId" element={<FetchUserProfileData />} />
-      </Routes>
+        {user.name === undefined ? 
+        <Routes>
+          <Route path="/" element={<PageLogin/>}/> 
+        </Routes>
+        : 
+        <Routes>
+          <Route path="/home" element={<Home/>}/>
+          {/* <Route path="/login" element ={<PageLogin/>}/> */}
+          <Route path="/users/:userId" element={<FetchUserProfileData />} />
+        </Routes> 
+        }
+        
       {!isLoginPage && <Footer />}
     </>
+
   );
 }
 

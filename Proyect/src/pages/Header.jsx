@@ -11,7 +11,7 @@ export function Header() {
   const navigate = useNavigate()
 
   function toHome(){
-    navigate(`/`)
+    navigate(`/home`)
   }
 
   return (

@@ -13,10 +13,7 @@ body {
   width: 100%;
   margin: 0 auto;
   padding: 0;
-
   font-family: var(--font-global);
-
-  /* scrollbar-color: var(--emphasis-color); */
 }
 
 button {
@@ -37,6 +34,8 @@ button {
   justify-content: center;
 }
 
+
+
 button path {
   transition: all ease-in-out 0.3s;
 }
@@ -48,8 +47,9 @@ button:hover {
 
 button:hover path {
   fill: var(--font-main-color);
-}
 
+}
 *{
   box-sizing: border-box;
+
 }

@@ -134,6 +134,9 @@ header {
         margin: 0;
         font-weight: 300;
       }
+      a:hover{
+        cursor: pointer;
+      }
     }
 
     hr {
