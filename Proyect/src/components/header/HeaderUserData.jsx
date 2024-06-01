@@ -17,14 +17,14 @@ export function HeaderUserData({userImg, userName}){
                 {userName && <h2>{userName}</h2>}
             </div>
             <div className="menu-data-user-props">
-                <a>Mis canciones favoritas</a>
-                <a>Mis playlists</a>        
-                <a>Mis amigos</a>
+                <a className="user-props-link">Mis canciones favoritas</a>
+                <a className="user-props-link">Mis playlists</a>        
+                <a className="user-props-link">Mis amigos</a>
             </div>
             <hr></hr>
             <div className="menu-data-user-props">
-                <a>Settings</a>
-                <a className="logout-button" onClick={handleLogout}>Logout</a>
+                <a className="user-props-link">Settings</a>
+                <a className="user-props-link logout-button" onClick={handleLogout}>Logout</a>
             </div>
         </div>
     )

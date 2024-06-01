@@ -89,7 +89,7 @@
     height: fit-content;
     background-color: var(--bg-cards-color);
     border-radius: 20px;
-    padding: 1rem 2rem 2rem 2rem;
+    padding: 0rem 1rem 1rem 1rem;
     margin: 1rem 0;
 
 
@@ -106,7 +106,8 @@
   
   .name_image{
     display: flex;
-    gap: 2rem;
+    gap: 1rem;
+    align-items: center;
   }
   
   .comment_post{
@@ -237,4 +238,45 @@
   .date{
     margin: 0;
     margin-top:-1.5rem
+  }
+
+  @media (max-width: 425px){
+    .home-container{
+      padding: 2rem 1rem;
+    }
+    .home-post-container{
+      width: 100%;
+    }
+    .home-buttons-container{
+      display: none;
+    }
+/*     .home-form{
+      position: sticky;
+      height: fit-content;
+      z-index: 11;
+    }*/
+    .form_container{
+      border-radius: 12px;
+      padding: 1rem 1rem 2rem 1rem;
+    }
+    .comments_container{
+      overflow-y: hidden;
+      height: fit-content;
+    }
+    .list_container{
+      width: 100%;
+      margin: 2px 0;
+      border-radius: 12px;
+    }
+    .parte_superior_form{
+      gap: 1rem;
+    }
+    .fondo_imagen{
+      width: 40px;
+      height: 40px;
+    }
+    .fondo_imagen_form{
+      width: 40px;
+      height: 40px;
+    }
   }

@@ -1,3 +1,4 @@
+import { HeaderUserSearch } from '../components/header/HeaderUserSearch.jsx';
 import { HomeLogo } from '../components/HomeLogo.jsx';
 import  PostForm  from '../components/PostForm.jsx';
 import  PostList  from '../components/PostList.jsx';
@@ -6,6 +7,7 @@ export function Home(){
 
     return(
       <div className="home-container">
+        <HeaderUserSearch/>
         {/* <div className="logo-container">
           <HomeLogo/>
         </div> */}

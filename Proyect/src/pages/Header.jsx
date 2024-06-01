@@ -3,6 +3,7 @@ import { HeaderUserSearch } from "../components/header/HeaderUserSearch";
 import { UserSettings } from "../components/header/UserSettings";
 import "../styles/header.css"
 import { useNavigate } from "react-router-dom";
+import { SearchUserMiniButton } from "../components/header/SearchUserMiniButton";
 
 
 
@@ -23,6 +24,7 @@ export function Header() {
         </div>
         <div className="header-mc-right">
         <UserSettings/>
+        <SearchUserMiniButton/>
         </div>
         </div> 
     </header>

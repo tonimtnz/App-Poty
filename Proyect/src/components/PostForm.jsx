@@ -48,7 +48,7 @@ function PostForm() {
   }
 
   return (
-    <form onSubmit={handleForm}>
+    <form className="home-form"onSubmit={handleForm}>
       <div className='form_container'>
         <div className='parte_superior_form'>
           <div className='fondo_imagen_form'>
