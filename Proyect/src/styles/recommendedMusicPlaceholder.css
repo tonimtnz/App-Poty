@@ -6,15 +6,15 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 1.5rem;
+  /* gap: 1.5rem; */
   padding: 2rem 0;
   border-radius: 20px;
   height: 352px;
 }
 
 .placeholder-img-recommendedMusic {
-  border-radius: 100%;
-  width: 140px;
+  width: 60%;
+  object-fit: cover;
 }
 
 @media (max-width: 432px) {
@@ -24,6 +24,6 @@
     padding: 1rem;
   }
   .placeholder-img-recommendedMusic {
-    width: 30%;
+    width: 60%;
   }
 }

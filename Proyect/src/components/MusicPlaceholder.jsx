@@ -5,7 +5,7 @@ export function MusicPlaceholder() {
     <div className="placeholder-div">
       <img
         className="placeholder-img-recommendedMusic"
-        src="./src/assets/MusicPlaceholder.jpg"
+        src="http://runmydev.com/wp-content/uploads/2024/06/Frame-2-1.jpg"
       />
       <h3>Elige una canción</h3>
     </div>

@@ -2,8 +2,8 @@ import "../styles/SongCard.css";
 
 export function InternalMusicHero({ currentSong }) {
   return (
-    <>
-      <div className="music-hero">
+    <div className="music-hero">
+      <div className="intern-hero">
         <h2 className="reco-title">RECOMENDACIONES</h2>
         {currentSong && (
           <p>
@@ -11,6 +11,6 @@ export function InternalMusicHero({ currentSong }) {
           </p>
         )}
       </div>
-    </>
+    </div>
   );
 }
