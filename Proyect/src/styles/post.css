@@ -194,6 +194,8 @@
   .comments_container{
     display: flex;
     flex-direction: column;
+    height: 392px;
+    overflow-y: auto;
   }
   
   .textocomment{
@@ -213,5 +215,6 @@
 
   .date{
     margin: 0;
-    margin-top:-1.5rem
+    margin-top:-1.5rem;
+    font-size: small;
   }
