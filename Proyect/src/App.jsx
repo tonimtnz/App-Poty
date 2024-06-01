@@ -1,7 +1,7 @@
 import { RecommendMusic } from "./pages/RecommendMusic";
 function App() {
   return (
-    <div className="BorrarDivPrueba">
+    <>
       <RecommendMusic />
 
       {/* <Header />
@@ -15,7 +15,7 @@ function App() {
       </Routes>
 
       <Footer /> */}
-    </div>
+    </>
   );
 }
 

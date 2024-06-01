@@ -1,5 +1,5 @@
 .placeholder-div {
-  background-color: #727272;
+  background-color: #242424;
   color: #ffffff;
   font-family: "Poppins";
   display: flex;
@@ -15,4 +15,15 @@
 .placeholder-img-recommendedMusic {
   border-radius: 100%;
   width: 140px;
+}
+
+@media (max-width: 432px) {
+  .placeholder-div {
+    flex-direction: row;
+    height: 152px;
+    padding: 1rem;
+  }
+  .placeholder-img-recommendedMusic {
+    width: 30%;
+  }
 }

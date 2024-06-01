@@ -3,12 +3,13 @@ import { SongCard } from "../components/SongCard";
 import { InternalMusicHero } from "../components/InternalMusicHero";
 import { DisclaimerNotice } from "../components/DisclaimerNotice";
 import { MusicPlaceholder } from "../components/MusicPlaceholder";
+import { LoadingComp } from "../components/LoadingComp";
 
 export function RecommendMusic() {
   const [songs, setSongs] = useState({});
   const [currentSongId, setCurrentSongId] = useState(null);
   const [currentSong, setCurrentSong] = useState(null);
-  // const [loading, setLoading] = useState(true);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     const url =
@@ -26,6 +27,7 @@ export function RecommendMusic() {
       .then((data) => {
         setSongs(data);
         console.log(data);
+        setLoading(false);
       })
       .catch((error) => console.error(error));
   }, []);
@@ -39,17 +41,21 @@ export function RecommendMusic() {
     <>
       <InternalMusicHero currentSong={currentSong} />
       <div className="content-container">
-        <div className="cards-container">
-          {songs.tracks?.map((song) => {
-            return (
-              <SongCard
-                key={song?.id}
-                eachSong={song}
-                onPlayClick={handlePlayClick}
-              />
-            );
-          })}
-        </div>
+        {loading ? (
+          <LoadingComp />
+        ) : (
+          <div className="cards-container">
+            {songs.tracks?.map((song) => {
+              return (
+                <SongCard
+                  key={song?.id}
+                  eachSong={song}
+                  onPlayClick={handlePlayClick}
+                />
+              );
+            })}
+          </div>
+        )}
 
         <div className="lateral-main-container">
           <div className="lateral-player-container">
