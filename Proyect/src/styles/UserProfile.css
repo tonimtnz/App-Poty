@@ -1,15 +1,18 @@
 @import url("../index.css");
 
 .userProfile-container {
+  width: 100%;
+  max-width: 1920px;
   height: fit-content;
   display: flex;
   flex-direction: row;
   gap: 2rem;
+  margin: 0 auto;
   padding: 2rem;
 }
 .content-container-left {
   background-color: #242424;
-  width: 20%;
+  width: 25%;
   padding: 1rem;
   border-radius: 20px;
   height: fit-content;
@@ -18,7 +21,7 @@
 }
 .content-container-right {
   background-color: #242424;
-  width: 80%;
+  width: 75%;
   padding: 1rem;
   border-radius: 20px;
   height: fit-content;
@@ -140,6 +143,8 @@
 .img-playlist {
   width: 100%;
   height: auto;
+  aspect-ratio: 1/1;
+
   border-radius: 12px;
 }
 
@@ -150,8 +155,9 @@
 
 .artist-img {
   width: 100%;
+  object-fit: cover;
   height: auto;
-  max-height: 320px;
+  aspect-ratio: 1/1;
   border-radius: 100%;
 }
 

@@ -1,14 +1,16 @@
 header {
-  height: 80px;
+  width: 100%;
+  height: fit-content;
   position: sticky;
   top: 0;
   z-index: 10;
+  background-color: var(--second-color);
 }
-.to-home{
+.to-home {
   width: fit-content;
   height: fit-content;
 }
-.to-home:hover{
+.to-home:hover {
   cursor: pointer;
 }
 
@@ -17,11 +19,12 @@ header {
   flex-direction: row;
   box-sizing: border-box;
   width: 100%;
-
+  max-width: 1920px;
   padding: 0 2rem;
   background-color: var(--second-color);
   align-items: center;
   justify-content: space-between;
+  margin: 0 auto;
 }
 
 .header-mc-left {
@@ -134,14 +137,14 @@ header {
         margin: 0;
         font-weight: 300;
       }
-      .user-props-link{
+      .user-props-link {
         transition: ease-in-out 0.3s;
       }
-      .user-props-link:hover{
+      .user-props-link:hover {
         cursor: pointer;
         transform: scale(1.05);
         transform: translateX(4px);
-        color: var(--font-main-color)
+        color: var(--font-main-color);
       }
     }
 
@@ -191,8 +194,8 @@ header {
   background-color: #55c2c6;
   cursor: pointer;
 }
-.mobile-search-users{
-  display:none
+.mobile-search-users {
+  display: none;
 }
 .userCard-button {
   display: flex;
@@ -234,17 +237,17 @@ header {
     left: 5.5rem;
   }
 }
-@media (max-width: 425px){
-  .header-user-search-bar{
+@media (max-width: 425px) {
+  .header-user-search-bar {
     display: none;
   }
-  .to-home{
+  .to-home {
     transform: translateY(5px);
   }
-  #user-button{
+  #user-button {
     display: none;
   }
-  .mobile-search-users{
+  .mobile-search-users {
     display: block;
     padding: 8px 8px 2px 8px;
   }
