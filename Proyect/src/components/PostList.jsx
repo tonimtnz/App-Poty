@@ -40,22 +40,33 @@ function PostList() {
   }
 
   function handleEdit(index) {
-    const newCommentText = prompt("Edit your comment:", comments[index].post);
-    if (newCommentText) {
-      const updatedComments = comments.map((comment, i) =>
-        i === index
-          ? { ...comment, post: newCommentText, date: new Date() }
-          : comment
-      );
-      localStorage.setItem("comments", JSON.stringify(updatedComments));
-      setComments(updatedComments);
+    
+    if (comments[index].name === postName) {
+      const newCommentText = prompt("Edit your comment:", comments[index].post);
+      if (newCommentText) {
+        const updatedComments = comments.map((comment, i) =>
+          i === index
+            ? { ...comment, post: newCommentText, date: new Date() }
+            : comment
+        );
+        localStorage.setItem("comments", JSON.stringify(updatedComments));
+        setComments(updatedComments);
+      }
+    } else {
+      console.error("No se puede modificar el post de alguien mas");
     }
+    
   }
 
   function handleDelete(index) {
-    const updatedComments = comments.filter((_, i) => i !== index);
-    localStorage.setItem("comments", JSON.stringify(updatedComments));
-    setComments(updatedComments);
+    if (comments[index].name === postName) {
+      const updatedComments = comments.filter((_, i) => i !== index);
+      localStorage.setItem("comments", JSON.stringify(updatedComments));
+      setComments(updatedComments);
+    } else{
+      console.error("No se puede eliminar el post de alguien mas");
+    }
+    
   }
 
   return (
