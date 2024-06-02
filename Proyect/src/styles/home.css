@@ -1,0 +1,30 @@
+.home-general{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+}
+
+.div-home-ambos-lados{
+    display: flex;
+    justify-content: space-around;
+    gap: 67px;
+}
+
+.div-home-escucha{
+    background-color: #E8115B;
+    width: 80%;
+    border-radius: 20px;
+    display: flex;
+    justify-content: space-around;
+    gap: 300px;
+}
+
+.div-home-escucha h1{
+    color: white;
+    
+}
+
+.logo-container svg{
+    width: 250px;
+}

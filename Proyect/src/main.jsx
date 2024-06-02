@@ -4,6 +4,7 @@ import App from './App.jsx'
 import './index.css'
 import './styles/post.css'
 import "./styles/homeDerecha.css"
+import "./styles/home.css"
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
