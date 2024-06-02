@@ -11,8 +11,7 @@ export function Home() {
             <div className="padding-especial">
                 <div className="div-home-escucha">
                     <div>
-                        <h1>Escucha y</h1>
-                        <h1>comparte</h1>
+                        <h1>Escucha y <br /> comparte</h1>
                     </div>
                     <HomeLogo />
                 </div>
