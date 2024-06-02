@@ -41,6 +41,13 @@
   border-radius: 8px;
 }
 
+.content-section h4 {
+  font-size: 1rem;
+}
+.content-section h5 {
+  font-weight: 400;
+}
+
 .playBtn {
   position: absolute;
   bottom: 20px;
@@ -65,11 +72,9 @@ h5 {
 .music-hero {
   width: 100%;
   height: fit-content;
-  background: url(../assets/bg-picture-music-release-section.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
-
+  padding: 0 2rem;
   font-family: Poppins;
+  border-radius: 24px;
 
   p {
     color: #ffffff;
@@ -90,11 +95,15 @@ h5 {
   height: 280px;
   max-width: 1920px;
   padding: 1rem 2rem;
-  margin: 0 auto;
+  margin: 1rem auto 0 auto;
   display: flex;
   align-items: start;
   justify-content: center;
   flex-direction: column;
+  background: url(../assets/hero-recommendationSection.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 22px;
 }
 
 .intern-hero .reco-title {
@@ -151,16 +160,70 @@ h5 {
 /* 
 MEDIAQUERIES */
 
+@media (max-width: 1025px) {
+  .dislaimer-container {
+    display: none;
+  }
+  .intern-hero .reco-title {
+    font-size: 1.5rem;
+  }
+  .intern-hero p {
+    font-size: 0.9rem;
+  }
+
+  .cards-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .lateral-main-container {
+    width: 100%;
+    bottom: 0;
+    gap: 0;
+  }
+  .music-hero {
+    height: fit-content;
+    padding: 0.5rem;
+  }
+  .intern-hero {
+    margin: 0;
+    padding: 1rem;
+    height: 120px;
+    border-radius: 12px;
+  }
+  .content-container {
+    width: 100%;
+    padding: 0.5rem;
+    flex-direction: column;
+  }
+  .cards-container {
+    width: 100%;
+    border-radius: 12px;
+    padding: 0.5rem;
+  }
+  .play-song-card {
+    height: 152px !important;
+    padding: 0.5;
+  }
+  .loading-container {
+    width: 100%;
+  }
+
+  .loading-img {
+    width: 40%;
+  }
+}
+
 @media (max-width: 432px) {
   .dislaimer-container {
     display: none;
   }
 
-  .music-hero .reco-title {
+  .intern-hero .reco-title {
     font-size: 1.5rem;
   }
-  .music-hero p {
-    font-size: 0.875rem;
+  .intern-hero p {
+    font-size: 0.9rem;
   }
 
   .cards-container {
@@ -174,19 +237,28 @@ MEDIAQUERIES */
     gap: 0;
   }
   .music-hero {
-    height: 120px;
+    height: fit-content;
+    padding: 0.5rem;
+  }
+  .intern-hero {
+    margin: 0;
     padding: 1rem;
+    height: 120px;
+    border-radius: 12px;
   }
   .content-container {
     width: 100%;
-    padding: 1rem;
+    padding: 0.5rem;
     flex-direction: column;
   }
   .cards-container {
     width: 100%;
+    border-radius: 12px;
+    padding: 0.5rem;
   }
   .play-song-card {
     height: 152px !important;
+    padding: 0.5;
   }
   .loading-container {
     width: 100%;
@@ -194,5 +266,8 @@ MEDIAQUERIES */
 
   .loading-img {
     width: 40%;
+  }
+  .content-section h4 {
+    font-size: 0.85rem;
   }
 }

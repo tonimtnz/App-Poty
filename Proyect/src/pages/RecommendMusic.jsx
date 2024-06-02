@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useFetchMusicRecommendations } from "../components/useFetchMusicRecommendations";
 import { SongCard } from "../components/SongCard";
 import { InternalMusicHero } from "../components/InternalMusicHero";
 import { DisclaimerNotice } from "../components/DisclaimerNotice";
@@ -6,36 +6,8 @@ import { MusicPlaceholder } from "../components/MusicPlaceholder";
 import { LoadingComp } from "../components/LoadingComp";
 
 export function RecommendMusic() {
-  const [songs, setSongs] = useState({});
-  const [currentSongId, setCurrentSongId] = useState(null);
-  const [currentSong, setCurrentSong] = useState(null);
-  const [loading, setLoading] = useState(true);
-
-  useEffect(() => {
-    const url =
-      "https://spotify23.p.rapidapi.com/recommendations/?limit=20&seed_tracks=0c6xIDDpzE81m2q797ordA&seed_artists=4NHQUGzhtTLFvgF5SZesLK&seed_genres=pop%2Crock";
-    const options = {
-      method: "GET",
-      headers: {
-        "X-RapidAPI-Key": "a7ba024be4msh62972134813b622p155dfejsn4695604f06f6",
-        "X-RapidAPI-Host": "spotify23.p.rapidapi.com",
-      },
-    };
-
-    fetch(url, options)
-      .then((res) => res.json())
-      .then((data) => {
-        setSongs(data);
-        console.log(data);
-        setLoading(false);
-      })
-      .catch((error) => console.error(error));
-  }, []);
-
-  const handlePlayClick = (song) => {
-    setCurrentSong(song);
-    setCurrentSongId(song.id);
-  };
+  const { songs, loading, currentSong, currentSongId, handlePlayClick } =
+    useFetchMusicRecommendations();
 
   return (
     <>

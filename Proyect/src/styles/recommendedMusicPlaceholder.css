@@ -16,6 +16,17 @@
   width: 60%;
   object-fit: cover;
 }
+@media (max-width: 1025px) {
+  .placeholder-div {
+    width: 100%;
+    flex-direction: row;
+    height: 152px;
+    padding: 1rem;
+  }
+  .placeholder-img-recommendedMusic {
+    width: 20%;
+  }
+}
 
 @media (max-width: 432px) {
   .placeholder-div {
