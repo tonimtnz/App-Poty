@@ -8,14 +8,14 @@ import RecentRelease from "../components/RecentRelease.jsx";
 export function Home() {
   return (
         <div>
-            <div className="padding-especial">
+            {/* <div className="padding-especial">
                 <div className="div-home-escucha">
                     <div>
                         <h1>Escucha y <br /> comparte</h1>
                     </div>
                     <HomeLogo />
                 </div>
-            </div>
+            </div> */}
                 <div className="home-container">
             
                   {/* <HeaderUserSearch/> */}
