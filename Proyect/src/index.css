@@ -8,10 +8,8 @@
 
   --font-global: "Poppins";
 }
-
 body {
   background-color: var(--main-color);
-  max-width: 1240px;
   width: 100%;
   margin: 0 auto;
   padding: 0;
@@ -49,4 +47,9 @@ button:hover {
 
 button:hover path {
   fill: var(--font-main-color);
+
+}
+*{
+  box-sizing: border-box;
+
 }

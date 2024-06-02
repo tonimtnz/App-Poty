@@ -1,0 +1,197 @@
+@import url("../index.css");
+
+.userProfile-container {
+  width: 100%;
+  max-width: 1920px;
+  height: fit-content;
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+  margin: 0 auto;
+  padding: 2rem;
+}
+.content-container-left {
+  background-color: #242424;
+  width: 25%;
+  padding: 1rem;
+  border-radius: 20px;
+  height: fit-content;
+  position: sticky;
+  top: 6rem;
+}
+.content-container-right {
+  background-color: #242424;
+  width: 75%;
+  padding: 1rem;
+  border-radius: 20px;
+  height: fit-content;
+  position: sticky;
+  top: 6rem;
+}
+.img-container p {
+  color: var(--font-main-color);
+  font-weight: 500;
+  font-style: italic;
+}
+.userProfile-img {
+  border-radius: 12px;
+  width: 100%;
+}
+
+.btns-info {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding: 0;
+  a {
+    width: 100%;
+    text-decoration: none;
+    box-sizing: border-box;
+  }
+  li {
+    list-style: none;
+  }
+}
+
+.special-btn {
+  border-radius: 8px;
+  background-color: transparent;
+  width: 100%;
+  color: var(--font-main-color);
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 0.5rem 1rem;
+  transition: all ease-in-out 0.3s;
+}
+
+.special-btn:hover {
+  background-color: var(--bg-cards-color);
+}
+
+.user-title {
+  margin: 0;
+  margin-top: 0.5rem;
+  color: var(--font-main-color);
+  font-weight: 400;
+  font-size: 12px;
+}
+
+.userProfile-name {
+  color: var(--font-main-color);
+  font-size: 2.5rem;
+  margin: 0;
+}
+
+.userProfile-numbers-container {
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+}
+
+.box-info {
+  background-color: var(--bg-cards-color);
+
+  height: 150px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  border-radius: 20px;
+  flex: 1;
+}
+
+.box-info h4 {
+  text-align: center;
+  color: var(--font-main-color);
+  font-size: 2.5rem;
+  margin: 0;
+}
+
+.box-info h6 {
+  text-align: center;
+  color: var(--font-main-color);
+  margin: 0;
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.subtitle-playlists {
+  color: var(--font-main-color);
+  margin: 2rem 0;
+}
+
+.playlists_public-container,
+.recent_artist-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: auto;
+  gap: 1rem;
+}
+
+.playlist-card {
+  /* width: 180px; */
+  padding: 0.5rem;
+  h4 {
+    color: var(--font-main-color);
+    font-weight: 500;
+    margin: 0;
+    font-size: 1.05rem;
+  }
+}
+
+.img-playlist {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1/1;
+
+  border-radius: 12px;
+}
+
+/* .scroll-section {
+  overflow-y: scroll;
+  height: 400px;
+} */
+
+.artist-img {
+  width: 100%;
+  object-fit: cover;
+  height: auto;
+  aspect-ratio: 1/1;
+  border-radius: 100%;
+}
+
+.card-artistInfo h2 {
+  color: var(--font-main-color);
+  text-align: center;
+  margin: 0;
+  font-size: 1.05rem;
+  font-weight: 500;
+}
+
+.card-artistInfo p {
+  color: var(--font-main-color);
+  text-align: center;
+  margin: 0;
+  font-size: 0.75rem;
+  font-weight: 400;
+}
+
+.link-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.enlace-userProfile {
+  color: var(--font-main-color);
+  text-decoration: none;
+  font-weight: 600;
+  transition: all ease-in-out 0.3s;
+}
+
+.enlace-userProfile:hover {
+  color: var(--emphasis-color);
+  scale: 1.05;
+}

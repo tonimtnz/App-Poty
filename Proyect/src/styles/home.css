@@ -11,13 +11,18 @@
     gap: 67px;
 }
 
+.padding-especial{
+    padding: 2rem;
+}
+
 .div-home-escucha{
     background-color: #E8115B;
-    width: 80%;
+    width: 100%;
     border-radius: 20px;
     display: flex;
-    justify-content: space-around;
-    gap: 300px;
+    justify-content: space-between;
+    padding: 2rem 3rem;
+    box-sizing: border-box;
 }
 
 .div-home-escucha h1{

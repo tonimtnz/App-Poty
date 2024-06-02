@@ -1,24 +1,40 @@
-import React from 'react'
-import HomeIzquierda from '../components/HomeIzquierda'
-import HomeBoton from '../components/HomeBoton'
-import Logo from '../components/Logo'
+// import { HeaderUserSearch } from "../components/header/HeaderUserSearch.jsx";
+import HomeBoton from "../components/HomeBoton.jsx";
+import { HomeLogo } from "../components/HomeLogo.jsx";
+import PostForm from "../components/PostForm.jsx";
+import PostList from "../components/PostList.jsx";
+import RecentRelease from "../components/RecentRelease.jsx";
 
-function Home() {
+export function Home() {
   return (
-    <div className='home-general'>
-        <div className='div-home-escucha'>
-            <div>
-                <h1>Escucha y</h1>
-                <h1>Comparte</h1>
+        <div>
+            <div className="padding-especial">
+                <div className="div-home-escucha">
+                    <div>
+                        <h1>Escucha y</h1>
+                        <h1>comparte</h1>
+                    </div>
+                    <HomeLogo />
+                </div>
             </div>
-            <Logo />
-        </div>
-        <div className='div-home-ambos-lados'>
-            <HomeIzquierda />
+                <div className="home-container">
+            
+                  {/* <HeaderUserSearch/> */}
+                  {/* <div className="logo-container">
+              <HomeLogo/>
+            </div> */}
+                  <div className="home-post-container">
+            <PostForm />
+            <PostList />
+                  </div>
+                  <div className="home-buttons-container">
             <HomeBoton />
+                  <RecentRelease />
+                  </div>
+                </div>
         </div>
-    </div>
-  )
+  );
 }
+
 
 export default Home
