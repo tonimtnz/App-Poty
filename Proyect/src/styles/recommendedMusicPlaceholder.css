@@ -1,0 +1,40 @@
+.placeholder-div {
+  background-color: #242424;
+  color: #ffffff;
+  font-family: "Poppins";
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /* gap: 1.5rem; */
+  padding: 2rem 0;
+  border-radius: 20px;
+  height: 352px;
+}
+
+.placeholder-img-recommendedMusic {
+  width: 60%;
+  object-fit: cover;
+}
+@media (max-width: 1025px) {
+  .placeholder-div {
+    width: 100%;
+    flex-direction: row;
+    height: 152px;
+    padding: 1rem;
+  }
+  .placeholder-img-recommendedMusic {
+    width: 10%;
+  }
+}
+
+@media (max-width: 432px) {
+  .placeholder-div {
+    flex-direction: row;
+    height: 152px;
+    padding: 1rem;
+  }
+  .placeholder-img-recommendedMusic {
+    width: 60%;
+  }
+}

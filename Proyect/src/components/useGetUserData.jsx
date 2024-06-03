@@ -4,6 +4,7 @@ import { UserContext } from "../context/userContext";
 export function useGetUserData() {
   const { user, setUser } = useContext(UserContext);
   const [username, setUsername] = useState("");
+  const [myId, setMyId] = useState("")
   const [userData, setUserData] = useState([{}]);
   const [error, setError] = useState(null);
   const [loading, setLoading] = useState(true);
@@ -17,7 +18,7 @@ export function useGetUserData() {
         "X-RapidAPI-Host": "spotify23.p.rapidapi.com",
       },
     };
-
+    
     try {
       const response = await fetch(url, options);
       const result = await response.json();
@@ -26,8 +27,8 @@ export function useGetUserData() {
     } catch (er) {
       setError(true);
       console.log(er);
-    }
-    console.log(user);
+    } 
+      console.log(user);   
   }
 
   return { username, userData, error, loading, GetUserData };

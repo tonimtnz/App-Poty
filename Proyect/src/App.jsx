@@ -1,3 +1,4 @@
+
 import { FetchUserProfileData } from "./components/FetchUserProfileData";
 import { Routes, Route, useLocation } from "react-router-dom";
 // import { UserProfile } from "./pages/UserProfile";
@@ -7,6 +8,7 @@ import PageLogin from "./pages/PageLogin";
 import { Home } from "./pages/Home";
 import { UserContext } from "./context/userContext";
 import { useContext } from "react";
+import { RecommendMusic } from "./pages/RecommendMusic";
 
 
 function App() {
@@ -27,6 +29,7 @@ function App() {
           <Route path="/home" element={<Home/>}/>
           {/* <Route path="/login" element ={<PageLogin/>}/> */}
           <Route path="/users/:userId" element={<FetchUserProfileData />} />
+          <Route path="/recommend" element={<RecommendMusic />}/>
         </Routes> 
         }
         

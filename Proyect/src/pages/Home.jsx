@@ -16,7 +16,7 @@ export function Home() {
         <PostList />
         </div>
         <div className="home-buttons-container">
-          <Link></Link>
+          <Link to="/recommend"><h2>Recommend</h2></Link>
        </div>
       </div>
 

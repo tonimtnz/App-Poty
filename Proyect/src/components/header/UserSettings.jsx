@@ -3,16 +3,19 @@ import { UserLogo } from "./UserLogo";
 import { HeaderUserData } from "./HeaderUserData";
 import { useGetUserData } from "../useGetUserData";
 import { UserContext } from "../../context/userContext";
+import { useGetUserId } from "../useGetUserId";
 
 export function UserSettings({}) {
   const [state, setState] = useState(false);
   const [toggle, setToggle] = useState(false);
   const { username, userData, error, loading, GetUserData } = useGetUserData();
+  const {id, GetId} = useGetUserId()
 
   const { user, setUser } = useContext(UserContext);
 
   function handleShowSettigns() {
     setToggle(!toggle);
+    console.log(id)
   }
 
   return (
@@ -28,7 +31,7 @@ export function UserSettings({}) {
           >
             X
           </button>
-          <HeaderUserData userName={user.name} userImg={user.image_url} />
+          <HeaderUserData userName={user.name} userImg={user.image_url} myUserId={id}/>
         </div>
       </section>
     </div>

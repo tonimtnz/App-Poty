@@ -2,12 +2,15 @@ import { useContext } from "react"
 import { UserContext } from "../../context/userContext"
 import { useNavigate } from "react-router-dom";
 
-export function HeaderUserData({userImg, userName}){
+export function HeaderUserData({userImg, userName, myUserId}){
     const navigate = useNavigate();
     const {user, setUser }= useContext(UserContext);
     function handleLogout(){
         setUser({})
         navigate('/')
+    }
+    function handleMyProf(){
+        navigate(`/users/${myUserId}`)
     }
 
     return(
@@ -17,9 +20,9 @@ export function HeaderUserData({userImg, userName}){
                 {userName && <h2>{userName}</h2>}
             </div>
             <div className="menu-data-user-props">
-                <a className="user-props-link">Mis canciones favoritas</a>
+                <a className="user-props-link" onClick={handleMyProf}>Mi perfil</a>
                 <a className="user-props-link">Mis playlists</a>        
-                <a className="user-props-link">Mis amigos</a>
+                <a className="user-props-link">Mis artistas favoritos</a>
             </div>
             <hr></hr>
             <div className="menu-data-user-props">
