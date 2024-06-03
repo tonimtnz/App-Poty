@@ -1,0 +1,17 @@
+.slider-Imgcontainer{
+    height: fit-content;
+    width: 100%;
+}
+
+
+.slider_img{
+    width: 100%;
+    object-fit: cover;
+    border-radius: 35px;
+}
+
+@media (max-width: 425px){
+    .slider_img{
+        border-radius: 12px;
+    }
+}

@@ -8,13 +8,19 @@
     background-color: #D7D7D7;
   }
   .home-container{
+    max-width: 1920px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 2rem;
+  }
+  .home-page-container{
     box-sizing: border-box;
     display: flex;
     gap: 2rem;
     flex-direction: row;
     width: 100%;
     margin: 0 auto;
-    padding: 2rem;
+    padding-top: 1rem;
     position: relative;
   }
   .home-post-container{
@@ -49,7 +55,6 @@
     background-color: var(--bg-cards-color);
     border-radius: 20px;
     padding: 2rem 2rem 3rem 2rem;
-    margin-top: 2rem;
   }
   
   .fondo_imagen{
@@ -242,7 +247,11 @@
 
   @media (max-width: 425px){
     .home-container{
-      padding: 2rem 1rem;
+      padding: 1rem;
+    }
+    .home-page-container{
+      padding: 1rem 0;
+      width: 100%;
     }
     .home-post-container{
       width: 100%;
