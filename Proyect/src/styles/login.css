@@ -22,10 +22,6 @@
     background-size: cover;
 }
 
-.login-logo{
-
-}
-
 .login-h1{
     font-size: 4rem;
     margin: 0;
@@ -110,6 +106,11 @@
     margin: 0;
     color: var(--font-main-color);
     cursor: pointer;
+    text-decoration: underline;
+}
+
+.olvide-p:hover{
+    color: #002E64;
 }
 
 .error-contraseña{
@@ -169,20 +170,20 @@
     
 }
 
-@media (max-width: 768px){
+@media (max-width: 1025px){
     .bg-image{
         background-image: url(../assets/girlLoginTablet.jpg);
+        display: flex;
+        flex-direction: column;
+        gap: 20%;
     }
 
     .bg-image svg{
         height: 50px;
-        position: relative;
-        top: 0.5rem;
-        right: 5%;
+
     }
 
     .div-login{
-        padding: 1.5rem;
         height: fit-content;
     }
 
@@ -207,19 +208,22 @@
 @media (max-width: 432px){
     .bg-image{
         background-image: url(../assets/girlLoginResponsive.jpg);
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
     }
 
     .bg-image svg{
         height: 50px;
-        position: relative;
-        right: 10%;
+        position: absolute;
+        right: 35%;
+        top: 10px;
     }
 
     .div-login{
         flex-direction: column;
         gap: 15px;
         align-items: first baseline;
-        padding: 12rem 1rem 1rem 1rem;
     }
 
     .login-h1{

@@ -13,6 +13,39 @@ header {
 .to-home:hover {
   cursor: pointer;
 }
+.mobile-nav-menu{
+  position: fixed;
+  display: none;
+  align-items: center;
+  justify-content: space-around;
+  justify-content: center;
+  bottom: 0;
+  background-color: var(--second-color);
+  width: 100%;
+  height: fit-content;
+  box-sizing: border-box;
+  padding-top: .5rem;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  z-index: 15;
+
+  .mobile-button{
+    width: 70%;
+    display: flex;
+    height: fit-content;
+    justify-content: center;
+    a{
+      padding: .6rem .65rem .2rem .65rem;
+    }
+    a:hover{
+      box-sizing: border-box;
+      border-radius: 30px;
+      background-color: #d9d9d9;
+      color: var(--main-color);
+    }
+    
+  }
+}
 
 .header-mc {
   display: flex;
@@ -168,7 +201,7 @@ header {
 
 #user-button {
   background-color: var(--bg-cards-color);
-  padding: 8px;
+  padding: 11px;
   width: 45px;
 }
 #user-button:hover {
@@ -223,6 +256,9 @@ header {
 }
 
 @media (max-width: 1025px) {
+  .mobile-nav-menu{
+    display: flex;
+  }
   .header-mc-left {
     flex-direction: column;
     gap: 0;

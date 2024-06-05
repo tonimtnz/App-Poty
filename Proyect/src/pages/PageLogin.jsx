@@ -1,5 +1,6 @@
 import React from 'react'
 import Login from '../components/login/Login'
+import '../styles/login.css'
 
 function PageLogin() {
   return (
