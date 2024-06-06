@@ -20,19 +20,13 @@ function App() {
 
     <>
       {!isLoginPage && <Header />}
-        {user.name === undefined ? 
         <Routes>
           <Route path="/" element={<PageLogin/>}/> 
-        </Routes>
-        : 
-        <Routes>
           <Route path="/home" element={<Home/>}/>
           {/* <Route path="/login" element ={<PageLogin/>}/> */}
           <Route path="/users/:userId" element={<FetchUserProfileData />} />
           <Route path="/recommend" element={<RecommendMusic />}/>
-        </Routes> 
-        }
-        
+        </Routes>
       {!isLoginPage && <Footer />}
     </>
 

@@ -1,10 +1,12 @@
-import React, { useEffect, useState } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import OlvidoContraseña from './OlvidoContraseña';
 import { useGetUserId } from '../useGetUserId';
 import { useGetUserData } from '../useGetUserData';
 import { useNavigate } from 'react-router-dom';
+import { UserContext } from '../../context/userContext';
 
 function Login() {
+  const {  user: logUser , logUserData } = useContext(UserContext)
   const navigate = useNavigate()
   const {id, setId, user, setUser, GetId} = useGetUserId()
   const {username, userData, _error, loading, GetUserData} = useGetUserData()
@@ -32,11 +34,16 @@ function Login() {
   
   useEffect(() => {
     if(id){
-      GetUserData(id)
+      GetUserData(id, true)
       console.log(id)
-      navigate ('/home')
-  }
-}, [id])
+      }
+      }, [id])
+      
+  useEffect(() => {
+    if(logUser.name){
+      navigate ('/home')          
+    }
+  }, [logUser])
         
 
   function handleName(e){

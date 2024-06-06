@@ -7,6 +7,7 @@ export function HeaderUserData({userImg, userName, myUserId}){
     const {user, setUser }= useContext(UserContext);
     function handleLogout(){
         setUser({})
+        localStorage.removeItem("LogedUser")
         navigate('/')
     }
     function handleMyProf(){

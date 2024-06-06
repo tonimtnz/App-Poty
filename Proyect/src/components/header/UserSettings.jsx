@@ -31,7 +31,7 @@ export function UserSettings({}) {
           >
             X
           </button>
-          <HeaderUserData userName={user.name} userImg={user.image_url} myUserId={id}/>
+          <HeaderUserData userName={user.name} userImg={user.image_url} myUserId={user.id}/>
         </div>
       </section>
     </div>
