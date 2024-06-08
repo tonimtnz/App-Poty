@@ -1,7 +1,8 @@
 import React from 'react'
 import Login from '../components/login/Login'
 import '../styles/login.css'
-import {HomeLogo} from "../components/HomeBoton"
+import { HomeLogo } from '../components/HomeLogo'
+
 
 function PageLogin() {
   return (
