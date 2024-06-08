@@ -250,7 +250,7 @@
     margin-top:-1.5rem
   }
 
-  @media (max-width: 425px){
+  @media (max-width: 1025px){
     .home-container{
       padding: 1rem;
     }

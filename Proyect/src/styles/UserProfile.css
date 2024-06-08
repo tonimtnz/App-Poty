@@ -12,6 +12,9 @@
 }
 .content-container-left {
   background-color: #242424;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
   width: 25%;
   padding: 1rem;
   border-radius: 20px;
@@ -21,6 +24,7 @@
 }
 .content-container-right {
   background-color: #242424;
+  box-sizing: border-box;
   width: 75%;
   padding: 1rem;
   border-radius: 20px;
@@ -194,4 +198,49 @@
 .enlace-userProfile:hover {
   color: var(--emphasis-color);
   scale: 1.05;
+}
+
+@media (max-width: 1025px){
+  .userProfile-container{
+    flex-direction: column;
+  }
+  .btns-info{
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-evenly;
+  }
+  .content-container-left{
+    width: fit-content;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+  }
+  .userProfile-numbers-container{
+    flex-direction: column;
+    align-items: center;
+  }
+  .playlists_public-container{
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .recent_artist-container{
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .userProfile-img{
+    width: 15%;
+  }
+  .user-title{
+    font-size: 16px;
+  }
+  .special-btn{
+    text-align: right;
+  }
+  .box-info{
+    width: 95%;
+    padding: 1rem;
+    box-sizing: border-box;
+  }
+  .content-container-right{
+    width: fit-content;
+  }
 }
