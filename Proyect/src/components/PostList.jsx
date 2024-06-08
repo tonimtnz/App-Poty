@@ -53,7 +53,7 @@ function PostList() {
         setComments(updatedComments);
       }
     } else {
-      console.error("No se puede modificar el post de alguien mas");
+      alert("No se puede modificar el post de otro usuario");
     }
     
   }
@@ -64,7 +64,7 @@ function PostList() {
       localStorage.setItem("comments", JSON.stringify(updatedComments));
       setComments(updatedComments);
     } else{
-      console.error("No se puede eliminar el post de alguien mas");
+      alert("No se puede eliminar el post de otro usuario");
     }
     
   }
