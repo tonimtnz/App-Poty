@@ -22,6 +22,16 @@
     background-size: cover;
 }
 
+.div-logo-login{
+    display: flex;
+    width: fit-content;
+    padding: 10px 0 0 10px;
+
+    svg{
+        width: fit-content;
+    }
+}
+
 .login-h1{
     font-size: 4rem;
     margin: 0;
@@ -210,15 +220,15 @@
         background-image: url(../assets/girlLoginResponsive.jpg);
         display: flex;
         flex-direction: column;
-        justify-content: space-around;
+        /* justify-content: space-around; */
     }
 
-    .bg-image svg{
+    /* .bg-image svg{
         height: 50px;
         position: absolute;
         right: 35%;
         top: 10px;
-    }
+    } */
 
     .div-login{
         flex-direction: column;
