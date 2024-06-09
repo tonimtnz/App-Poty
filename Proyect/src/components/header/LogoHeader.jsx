@@ -1,6 +1,7 @@
 export function LogoHeader() {
   return (
     <svg
+      className="logo-header"
       xmlns="http://www.w3.org/2000/svg"
       width="220"
       zoomAndPan="magnify"

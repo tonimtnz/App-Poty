@@ -5,7 +5,7 @@ import { RecentArtist } from "../components/RecentArtists";
 export function UserArtists({ data }) {
   return (
     <div className="recent_artist-container">
-      {data.recently_played_artists.map((recentArtistInfo, index) => {
+      {data.recently_played_artists && data.recently_played_artists.map((recentArtistInfo, index) => {
         return <RecentArtist key={index} recentArtistInfo={recentArtistInfo} />;
       })}
     </div>

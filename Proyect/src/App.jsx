@@ -23,7 +23,6 @@ function App() {
         <Routes>
           <Route path="/" element={<PageLogin/>}/> 
           <Route path="/home" element={<Home/>}/>
-          {/* <Route path="/login" element ={<PageLogin/>}/> */}
           <Route path="/users/:userId" element={<FetchUserProfileData />} />
           <Route path="/recommend" element={<RecommendMusic />}/>
         </Routes>

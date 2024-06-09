@@ -59,7 +59,9 @@ header {
   justify-content: space-between;
   margin: 0 auto;
 }
-
+.mini-logo-header{
+  display: none;
+}
 .header-mc-left {
   display: flex;
   flex-direction: row;
@@ -105,11 +107,11 @@ header {
   display: none;
 }
 .header-mc-shown {
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
-  height: 1000px;
+  height: 100%;
   background-color: #00000088;
   display: flex;
   justify-content: end;
@@ -198,7 +200,11 @@ header {
   background-color: var(--font-main-color);
   color: var(--second-color);
 }
-
+#mobile-user-button{
+  display: none;
+  background-color: none !important;
+  transform:translateY(-3px);
+}
 #user-button {
   background-color: var(--bg-cards-color);
   padding: 11px;
@@ -259,14 +265,48 @@ header {
   .mobile-nav-menu{
     display: flex;
   }
-  .header-mc-left {
-    flex-direction: column;
-    gap: 0;
-    padding-bottom: 0.5rem;
-
-    svg {
-      transform: translateX(-15px);
+  .mini-logo-header{
+    display: block;
+  }
+  .header-mc{
+    padding: .5rem;
+  }
+  .header-mc-right{
+    display: none;
+  }
+  #mobile-user-button{
+    display: block;
+  }
+  .header-user-search-bar{
+    box-sizing: border-box;
+    input{
+      width: 100%;
+      font-size: smaller;
+      padding: 0;
+      border-top-right-radius: 0;
+      border-bottom-right-radius: 0;
     }
+    button{
+      font-size: smaller;
+      transform: translateX(-10px);
+      border-top-left-radius: 0;
+      border-bottom-left-radius: 0;
+    }
+  }
+  .header-mc-left {
+    width: 100%;
+    justify-content: space-between;
+    svg{
+      width: 80px;
+      transform: translateY(-6px);
+    }
+    .logo-header{
+      display: none;
+    }
+    
+  }
+  #user-button {
+    display: none;
   }
   .userCard {
     top: 6.5rem;
@@ -274,17 +314,7 @@ header {
   }
 }
 @media (max-width: 425px) {
-  .header-user-search-bar {
-    display: none;
-  }
   .to-home {
     transform: translateY(5px);
-  }
-  #user-button {
-    display: none;
-  }
-  .mobile-search-users {
-    display: block;
-    padding: 8px 8px 2px 8px;
   }
 }
