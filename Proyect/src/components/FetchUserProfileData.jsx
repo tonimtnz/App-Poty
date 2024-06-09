@@ -7,7 +7,7 @@ export function FetchUserProfileData() {
   const options = {
     method: "GET",
     headers: {
-      "X-RapidAPI-Key": "47028f098fmshf4fb8a15a006c35p162035jsnc87df19bf23a",
+      "X-RapidAPI-Key": "2feb77fca8msh6c23833207b60d5p177292jsneaf6e08cce77",
       "X-RapidAPI-Host": "spotify23.p.rapidapi.com",
     },
   };

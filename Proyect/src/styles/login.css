@@ -1,275 +1,272 @@
 :root {
-    --main-color: #363636;
-    --second-color: #005d65;
-    --bg-cards-color: #474e53;
-    --font-main-color: #ffffff;
-    --font-second-color: #04faf6;
-    --emphasis-color: #00f7ff;
+  --main-color: #363636;
+  --second-color: #005d65;
+  --bg-cards-color: #474e53;
+  --font-main-color: #ffffff;
+  --font-second-color: #04faf6;
+  --emphasis-color: #00f7ff;
 
-    --font-global: "Poppins";
-  }
-
-  body{
-    margin: 0;
-    font-family: var(--font-global);
-  }
-
-.bg-image{
-    background-image: url(../assets/girlLogin.jpg);
-    background-repeat: no-repeat;
-    height: 100vh;
-    width: 100vw;
-    background-size: cover;
+  --font-global: "Poppins";
 }
 
-.div-logo-login{
-    display: flex;
+body {
+  margin: 0;
+  font-family: var(--font-global);
+}
+
+.bg-image {
+  background-image: url(../assets/girlLogin.jpg);
+  background-repeat: no-repeat;
+  height: 100vh;
+  width: 100vw;
+  background-size: cover;
+}
+
+.div-logo-login {
+  display: flex;
+  width: fit-content;
+  padding: 10px 0 0 10px;
+
+  svg {
     width: fit-content;
-    padding: 10px 0 0 10px;
-
-    svg{
-        width: fit-content;
-    }
+  }
 }
 
-.login-h1{
-    font-size: 4rem;
-    margin: 0;
-    color: var(--font-main-color);
-    width: 60%;
+.login-h1 {
+  font-size: 4rem;
+  margin: 0;
+  color: var(--font-main-color);
+  width: 60%;
 }
 
-.login-h1 span{
-    background-color: var(--second-color);
+.login-h1 span {
+  background-color: var(--second-color);
 }
 
-.div-login{
-    display: flex;
-    gap: 2rem;
-    align-items: center;
-    padding: 0 4rem;
-    height: 500px;
+.div-login {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+  padding: 0 4rem;
+  height: 500px;
 }
 
-.div-form{
-    background-color: var(--bg-cards-color);
-    border-radius: 15px;
-    width: 40%;
-    box-sizing: border-box;
-    padding: 3rem 4rem;
+.div-form {
+  background-color: var(--bg-cards-color);
+  border-radius: 15px;
+  width: 40%;
+  box-sizing: border-box;
+  padding: 3rem 4rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.form-login {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 1rem;
+}
+
+.input-login {
+  height: 50px;
+  padding-left: 10px;
+  width: 100%;
+  border-radius: 25px;
+  background-color: var(--font-main-color);
+  border: none;
+}
+
+.input-login-error {
+  height: 50px;
+  padding-left: 10px;
+  width: 100%;
+  border-radius: 25px;
+  background-color: var(--font-main-color);
+  border: 2px solid red;
+}
+
+.input-button {
+  border: none;
+  width: 100%;
+  border-radius: 25px;
+  background-color: var(--font-second-color);
+  color: var(--main-color);
+  height: 40px;
+}
+
+.input-button:hover {
+  background-color: #002e64;
+}
+
+.login-p {
+  margin: 0;
+  color: var(--font-main-color);
+}
+
+.login-h {
+  margin: 0;
+  color: var(--font-main-color);
+}
+
+.olvide-p {
+  margin: 0;
+  color: var(--font-main-color);
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.olvide-p:hover {
+  color: #002e64;
+}
+
+.error-contraseña {
+  color: red;
+}
+
+.div-form.olvido {
+  position: absolute;
+  top: 15%;
+  left: 35%;
+  width: 400px;
+  height: 70%;
+  background-color: var(--bg-cards-color);
+  border-radius: 15px;
+  z-index: 11;
+}
+
+.olvido-form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  width: 100%;
+  z-index: 11;
+}
+
+.div-form.olvido svg {
+  height: 20px;
+  position: absolute;
+  top: 25px;
+  left: 260px;
+  cursor: pointer;
+  z-index: 13;
+  fill: white;
+}
+
+.input-button-confirmar {
+  border: none;
+  width: 100%;
+  border-radius: 25px;
+  background-color: var(--font-second-color);
+  color: var(--main-color);
+  height: 40px;
+}
+
+.input-button-confirmar:hover {
+  background-color: #002e64;
+}
+
+.div-cubre-todo {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+@media (max-width: 1025px) {
+  .bg-image {
+    background-image: url(../assets/girlLoginTablet.jpg);
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 1rem;
-}
+    gap: 20%;
+  }
 
-.form-login{
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    gap: 1rem;
-}
-
-.input-login{
+  .bg-image svg {
     height: 50px;
-    padding-left: 10px;
-    width: 100%;
-    border-radius: 25px;
-    background-color: var(--font-main-color);
-    border: none;
+  }
+
+  .div-login {
+    height: fit-content;
+  }
+
+  .login-h1 {
+    font-size: 3rem;
+    width: 45%;
+    text-wrap: nowrap;
+  }
+
+  .div-form {
+    width: 50%;
+    padding: 2rem 1.5rem;
+  }
+
+  .div-form.olvido {
+    top: 5%;
+    left: 25%;
+    height: 90%;
+  }
 }
 
-.input-login-error{
-    height: 50px;
-    padding-left: 10px;
-    width: 100%;
-    border-radius: 25px;
-    background-color: var(--font-main-color);
-    border: 2px solid red;
-}
-
-.input-button{
-    border: none;
-    width: 100%;
-    border-radius: 25px;
-    background-color: var(--font-second-color);
-    color: var(--main-color);
-    height: 40px;
-}
-
-.input-button:hover{
-    background-color: #002E64;
-}
-
-.login-p{
-    margin: 0;
-    color: var(--font-main-color);
-}
-
-.login-h{
-    margin: 0;
-    color: var(--font-main-color);
-}
-
-.olvide-p{
-    margin: 0;
-    color: var(--font-main-color);
-    cursor: pointer;
-    text-decoration: underline;
-}
-
-.olvide-p:hover{
-    color: #002E64;
-}
-
-.error-contraseña{
-    color: red;
-
-}
-
-.div-form.olvido{
-    position: absolute;
-    top: 15%;
-    left: 35%;
-    width: 400px;
-    height: 70%;
-    background-color: var(--bg-cards-color);
-    border-radius: 15px;
-    z-index: 11;
-}
-
-.olvido-form{
+@media (max-width: 432px) {
+  .bg-image {
+    background-image: url(../assets/girlLoginResponsive.jpg);
     display: flex;
     flex-direction: column;
-    gap: 0.5rem;
-    width: 100%;
-    z-index: 11;
-}
+    /* justify-content: space-around; */
+  }
 
-.div-form.olvido svg{
-    height: 20px;
-    position: absolute;
-    top: 25px;
-    left: 260px;
-    cursor: pointer;
-    z-index: 13;
-    fill: white
-}
-
-.input-button-confirmar{
-    border: none;
-    width: 100%;
-    border-radius: 25px;
-    background-color: var(--font-second-color);
-    color: var(--main-color);
-    height: 40px;
-}
-
-.input-button-confirmar:hover{
-    background-color: #002E64;
-}
-
-.div-cubre-todo{
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.5)
-    
-}
-
-@media (max-width: 1025px){
-    .bg-image{
-        background-image: url(../assets/girlLoginTablet.jpg);
-        display: flex;
-        flex-direction: column;
-        gap: 20%;
-    }
-
-    .bg-image svg{
-        height: 50px;
-
-    }
-
-    .div-login{
-        height: fit-content;
-    }
-
-    .login-h1{
-        font-size: 3rem;
-        width: 45%;
-        text-wrap: nowrap;
-    }
-
-    .div-form{
-        width: 50%;
-        padding: 2rem 1.5rem;
-    }
-
-    .div-form.olvido{
-        top: 5%;
-        left: 25%;
-        height: 90%;
-    }
-}
-
-@media (max-width: 432px){
-    .bg-image{
-        background-image: url(../assets/girlLoginResponsive.jpg);
-        display: flex;
-        flex-direction: column;
-        /* justify-content: space-around; */
-    }
-
-    /* .bg-image svg{
+  /* .bg-image svg{
         height: 50px;
         position: absolute;
         right: 35%;
         top: 10px;
     } */
 
-    .div-login{
-        flex-direction: column;
-        gap: 15px;
-        align-items: first baseline;
-    }
+  .div-login {
+    flex-direction: column;
+    gap: 15px;
+    align-items: first baseline;
+  }
 
-    .login-h1{
-        font-size: 2rem;
-        color: var(--font-main-color);
-    }
+  .login-h1 {
+    font-size: 2rem;
+    color: var(--font-main-color);
+  }
 
-    .div-form{
-        width: 100%;
-        padding: 1.5rem;
-    }
+  .div-form {
+    width: 100%;
+    padding: 1.5rem;
+  }
 
-    .input-button{
-        background-color: var(--font-second-color);
-        color: var(--main-color);
-    }
+  .input-button {
+    background-color: var(--font-second-color);
+    color: var(--main-color);
+  }
 
-    .form-login{
-        width: 95%;
-        height: fit-content;
-    }
+  .form-login {
+    width: 95%;
+    height: fit-content;
+  }
 
-    .div-form.olvido{
-        top: 15%;
-        left: 4%;
-        height: 70%;
-        width: 93%;
-    }
+  .div-form.olvido {
+    top: 15%;
+    left: 4%;
+    height: 70%;
+    width: 93%;
+  }
 
-    .div-olvido{
-        left: 8%;
-        width: 315px;
-    }
+  .div-olvido {
+    left: 8%;
+    width: 315px;
+  }
 
-    .div-form.olvido svg{
-        left: 65%;
-        height: 20px;
-    }
+  .div-form.olvido svg {
+    left: 65%;
+    height: 20px;
+  }
 }

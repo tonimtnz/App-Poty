@@ -13,33 +13,33 @@ export function Footer() {
         <h4>Desarrollado por:</h4>
         <ul className="members-list">
           <li>
-            <a href="#" target="_blank">
+            <a href="#" target="_blank" style={{ fontSize: "1rem" }}>
               Richard Suárez
             </a>
           </li>
           <li>
-            <a href="#" target="_blank">
+            <a href="#" target="_blank" style={{ fontSize: "1rem" }}>
               Pedro Grandini
             </a>
           </li>
           <li>
-            <a href="#" target="_blank">
+            <a href="#" target="_blank" style={{ fontSize: "1rem" }}>
               Luis Grandini
             </a>
           </li>
           <li>
-            <a href="#" target="_blank">
+            <a href="#" target="_blank" style={{ fontSize: "1rem" }}>
               Antonio Martínez
             </a>
           </li>
           <li>
-            <a href="#" target="_blank">
+            <a href="#" target="_blank" style={{ fontSize: "1rem" }}>
               Jairo Romero
             </a>
           </li>
         </ul>
         <hr></hr>
-        <h3>A Develhope Proyect that rules 🥵</h3>
+        <h3 style={{ fontSize: "1rem" }}>A Develhope Proyect that rules 🥵</h3>
       </div>
     </footer>
   );

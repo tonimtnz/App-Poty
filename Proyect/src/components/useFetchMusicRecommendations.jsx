@@ -12,7 +12,7 @@ export function useFetchMusicRecommendations() {
     const options = {
       method: "GET",
       headers: {
-        "X-RapidAPI-Key": "a7ba024be4msh62972134813b622p155dfejsn4695604f06f6",
+        "X-RapidAPI-Key": "2feb77fca8msh6c23833207b60d5p177292jsneaf6e08cce77",
         "X-RapidAPI-Host": "spotify23.p.rapidapi.com",
       },
     };

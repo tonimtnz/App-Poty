@@ -4,7 +4,7 @@ import { UserContext } from "../context/userContext";
 export function useGetUserData() {
   const { user, setUser, logUserData } = useContext(UserContext);
   const [username, setUsername] = useState("");
-  const [myId, setMyId] = useState("")
+  const [myId, setMyId] = useState("");
   const [userData, setUserData] = useState([{}]);
   const [error, setError] = useState(null);
   const [loading, setLoading] = useState(true);
@@ -14,24 +14,24 @@ export function useGetUserData() {
     const options = {
       method: "GET",
       headers: {
-        "X-RapidAPI-Key": "47028f098fmshf4fb8a15a006c35p162035jsnc87df19bf23a",
+        "X-RapidAPI-Key": "2feb77fca8msh6c23833207b60d5p177292jsneaf6e08cce77",
         "X-RapidAPI-Host": "spotify23.p.rapidapi.com",
       },
     };
-    
+
     try {
       const response = await fetch(url, options);
       const result = await response.json();
       setLoading(false);
-      setUser({...result, id: userName});
-      if(isLogged){
-        logUserData({...result, id: userName})
+      setUser({ ...result, id: userName });
+      if (isLogged) {
+        logUserData({ ...result, id: userName });
       }
     } catch (er) {
       setError(true);
       console.log(er);
-    } 
-      console.log(user);   
+    }
+    console.log(user);
   }
 
   return { username, userData, error, loading, GetUserData };

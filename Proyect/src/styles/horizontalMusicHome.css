@@ -1,0 +1,96 @@
+.placeholder-div2 {
+  display: flex;
+  flex-direction: row;
+  background-color: #242424;
+  padding: 1rem;
+  height: 152px;
+  border-radius: 20px;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 2rem;
+  overflow: hidden;
+  h3 {
+    color: var(--font-main-color);
+  }
+  margin-bottom: 1rem;
+}
+
+.placeholder-img-recommendedMusicHorizontal {
+  width: 120px;
+}
+
+.content-container-home {
+  width: 100%;
+  background-color: #242424;
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  border-radius: 20px;
+  padding: 0.5rem;
+}
+.cards-container-home {
+  width: 100%;
+  display: flex;
+  gap: 0.5rem;
+  flex-direction: column;
+}
+
+.horizontalCard {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  position: relative;
+  gap: 2rem;
+  width: 100%;
+  margin: 0;
+  padding: 0.5rem;
+  transition: all ease-in-out 0.3s;
+  border-radius: 12px;
+}
+
+.horizontalCard:hover {
+  background-color: #474e53;
+  cursor: pointer;
+}
+
+.horizontalCard h4,
+h5 {
+  color: var(--font-main-color);
+  border-radius: 12px;
+}
+
+.img-btn-section-home {
+  width: 120px;
+  height: 120px;
+  aspect-ratio: 1/1;
+  object-fit: cover;
+}
+
+.title-reco-section-home {
+  color: var(--font-main-color);
+  font-family: Poppins;
+}
+
+.song-img-home {
+  width: 100%;
+  border-radius: 12px;
+}
+
+.playBtn-home {
+  position: absolute;
+  right: 1rem;
+  bottom: 1rem;
+  width: 50px;
+  height: 50px;
+  padding: 0px;
+}
+
+.playBtn-home svg {
+  width: 50px;
+  height: 20px;
+}
+
+.playBtn-home svg path {
+  fill: #363636;
+}

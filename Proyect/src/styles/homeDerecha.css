@@ -1,54 +1,64 @@
-
-.botones-del-home{
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
-
-    button:hover{
-        background-color: var(--font-main-color);
-        color: var(--second-color)
-    }
-    .boton-recomendaciones:hover{
-        background-color: var(--font-main-color);
-        color: var(--second-color)
-    }
+.botones-del-home {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+.boton-recomendaciones:hover {
+  background-color: var(--font-main-color);
+  color: var(--second-color);
 }
 
-.botones-inferiores{
-    display: flex;
-    justify-content: space-between;
+.botones-inferiores {
+  display: flex;
+  justify-content: space-between;
 }
 
-.boton-recomendaciones{
-    box-sizing: border-box;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    height: 100px;
-    background-color: #FF2C2C;
-    color: var(--font-main-color);
-    border-radius: 20px;
-    text-decoration: none;
-    transition: all ease-in-out .3s;
+.boton-recomendaciones {
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100px;
+  background-color: #ff2c2c;
+  color: var(--font-main-color);
+  border-radius: 20px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: all ease-in-out 0.3s;
 }
 
-.boton-playlist{
-    width: 47%;
-    height: 100px;
-    background-color: #009418;
-    color: var(--font-main-color);
-    border-radius: 20px;
+.boton-recomendaciones:hover {
+  background-color: #ff0000;
+  color: var(--font-main-color);
 }
 
-.boton-artista{
-    width: 47%;
-    height: 100px;
-    background-color: #002E64;
-    color: var(--font-main-color);
-    border-radius: 20px;
+.boton-playlist {
+  width: 47%;
+  height: 100px;
+  background-color: #009418;
+  color: var(--font-main-color);
+  border-radius: 20px;
 }
 
-.div-recent-release{
-    color: white;
+.boton-playlist:hover {
+  background-color: #007e15;
+  color: var(--font-main-color);
+}
+
+.boton-artista {
+  width: 47%;
+  height: 100px;
+  background-color: #002e64;
+  color: var(--font-main-color);
+  border-radius: 20px;
+}
+
+.boton-artista:hover {
+  background-color: #002652;
+  color: var(--font-main-color);
+}
+
+.div-recent-release {
+  color: white;
 }
