@@ -4,6 +4,7 @@ import { HeaderUserData } from "./HeaderUserData";
 import { useGetUserData } from "../useGetUserData";
 import { UserContext } from "../../context/userContext";
 import { useGetUserId } from "../useGetUserId";
+import { Link } from "react-router-dom";
 
 export function UserSettings({}) {
   const [state, setState] = useState(false);
@@ -23,6 +24,9 @@ export function UserSettings({}) {
       <button onClick={handleShowSettigns} id="user-button">
         <UserLogo />
       </button>
+      <Link onClick={handleShowSettigns} id="mobile-user-button">
+        <UserLogo/>
+      </Link>
       <section className={toggle ? "header-mc-shown" : "header-mc-hidden"}>
         <div className="header-mc-user-menu">
           <button

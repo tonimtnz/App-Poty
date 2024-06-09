@@ -241,6 +241,6 @@
     box-sizing: border-box;
   }
   .content-container-right{
-    width: fit-content;
+    width: 100%;
   }
 }

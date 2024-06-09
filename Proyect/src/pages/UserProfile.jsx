@@ -1,5 +1,4 @@
 // import { Routes, Route } from "react-router-dom";
-
 import { UserProfileLeft } from "../components/UserProfileLeft";
 import { UserProfileRight } from "../components/UserProfileRight";
 import "../styles/UserProfile.css";
@@ -7,7 +6,9 @@ import "../styles/UserProfile.css";
 // import { UserPlaylists } from "./UserPlaylists";
 
 export function UserProfile({ data }) {
-  console.log(data);
+/*   const playlistMatch = useRouteMatch({path: '/users/:userId/:playlist', exact: true})
+  const artistMatch = useRouteMatch({path: '/users/:userId/:artist', exact: true})
+ */ console.log(data);
   return (
     <div className="userProfile-container">
       <div className="content-container-left">
@@ -20,7 +21,7 @@ export function UserProfile({ data }) {
         </Routes> */}
       </div>
       <div className="content-container-right">
-        <UserProfileRight data={data} />
+        <UserProfileRight data={data} /* pMatch={playlistMatch} aMatch={artistMatch} *//>
       </div>
     </div>
   );

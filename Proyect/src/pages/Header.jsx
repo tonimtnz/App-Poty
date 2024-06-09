@@ -9,6 +9,7 @@ import { HomeLogo } from "../components/header/HomeLogo";
 import { PlaylistLogo } from "../components/header/PlaylistLogo";
 import { RecomendLogo } from "../components/header/RecomendLogo";
 import { FriendsLogo } from "../components/header/FriendsLogo";
+import { MiniLogoHeader } from "../components/header/MiniLogoHeader";
 
 export function Header() {
   const navigate = useNavigate();
@@ -23,7 +24,7 @@ export function Header() {
       <div className="header-mc">
         <div className="header-mc-left">
           <a onClick={toHome} className="to-home">
-            <LogoHeader />
+            <LogoHeader /> <MiniLogoHeader/>
           </a>
           <HeaderUserSearch />
         </div>
@@ -47,7 +48,7 @@ export function Header() {
           <Link><PlaylistLogo/></Link>
         </div>
         <div className="mobile-button mobile-nav-profile-button">
-          <Link><UserLogo/></Link>
+          <Link><UserSettings/></Link>
         </div>
       </div>
     </>
