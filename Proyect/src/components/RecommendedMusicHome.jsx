@@ -14,12 +14,12 @@ export function RecommendedMusicHome() {
       <div className="player-container-home">
         {currentSongId ? (
           <iframe
-          style={{borderRadius: 12 + 'px'}}
-          src={`https://open.spotify.com/embed/track/${currentSong}utm_source=generator`}
+          /* style={{borderRadius: 12 + 'px'}} */
+          src={`https://open.spotify.com/embed/track/${currentSongId}utm_source=generator&autoplay=!`}
           width="100%"
           height="152"
           frameBorder="0"
-          allowfullscreen=""
+          /* allowFullScreen="" */
           allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
           loading="lazy"
         ></iframe>
