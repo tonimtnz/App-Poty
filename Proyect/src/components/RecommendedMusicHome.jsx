@@ -5,7 +5,7 @@ import { MusicPlaceholderHorizonal } from "./PlaceHolderHorizontal";
 import "../styles/horizontalMusicHome.css";
 
 export function RecommendedMusicHome() {
-  const { songs, loading, currentSong, currentSongId, handlePlayClick } =
+  const { songs, loading, currentSongId, handlePlayClick } =
     useFetchMusicRecommendations();
 
   return (
@@ -14,15 +14,14 @@ export function RecommendedMusicHome() {
       <div className="player-container-home">
         {currentSongId ? (
           <iframe
-          /* style={{borderRadius: 12 + 'px'}} */
-          src={`https://open.spotify.com/embed/track/${currentSongId}utm_source=generator&autoplay=!`}
-          width="100%"
-          height="152"
-          frameBorder="0"
-          /* allowFullScreen="" */
-          allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
-          loading="lazy"
-        ></iframe>
+            className="play-song-card"
+            src={`https://open.spotify.com/embed/track/${currentSongId}?utm_source=generator&autoplay=1`}
+            width="100%"
+            height="152"
+            frameBorder="0"
+            allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+            loading="lazy"
+          ></iframe>
         ) : (
           <MusicPlaceholderHorizonal />
         )}
