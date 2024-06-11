@@ -21,6 +21,7 @@ export function RecommendedMusicHome() {
             frameBorder="0"
             allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
             loading="lazy"
+            style={{ marginBottom: "12px" }}
           ></iframe>
         ) : (
           <MusicPlaceholderHorizonal />
