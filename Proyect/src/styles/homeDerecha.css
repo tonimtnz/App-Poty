@@ -20,7 +20,7 @@
   justify-content: center;
   width: 100%;
   height: 100px;
-  background-color: #ff2c2c;
+  background-color: #0d73ec;
   color: var(--font-main-color);
   border-radius: 20px;
   text-decoration: none;
@@ -29,33 +29,33 @@
 }
 
 .boton-recomendaciones:hover {
-  background-color: #ff0000;
+  background-color: var(--second-color);
   color: var(--font-main-color);
 }
 
 .boton-playlist {
   width: 47%;
   height: 100px;
-  background-color: #009418;
+  background-color: #e8115b;
   color: var(--font-main-color);
   border-radius: 20px;
 }
 
 .boton-playlist:hover {
-  background-color: #007e15;
+  background-color: var(--second-color);
   color: var(--font-main-color);
 }
 
 .boton-artista {
   width: 47%;
   height: 100px;
-  background-color: #002e64;
+  background-color: #148a08;
   color: var(--font-main-color);
   border-radius: 20px;
 }
 
 .boton-artista:hover {
-  background-color: #002652;
+  background-color: var(--second-color);
   color: var(--font-main-color);
 }
 
