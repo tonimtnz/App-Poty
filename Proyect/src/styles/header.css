@@ -97,10 +97,11 @@ header {
   }
   button {
     transform: translateX(-35px);
+    box-sizing: border-box;
   }
   button:hover {
-    background-color: var(--font-main-color);
-    color: var(--second-color);
+    background-color: #001e3f;
+    color: var(--font-main-color);
   }
 }
 .header-mc-hidden {
