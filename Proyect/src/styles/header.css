@@ -275,6 +275,10 @@ header {
   .header-mc-right{
     display: none;
   }
+  .userCard{
+    top: 1.5rem !important;
+    left: 0 !important;
+  }
   #mobile-user-button{
     display: block;
   }
