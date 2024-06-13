@@ -13,22 +13,22 @@ export function Footer() {
         <h4>Desarrollado por:</h4>
         <ul className="members-list">
           <li>
-            <a href="#" target="_blank" style={{ fontSize: "1rem" }}>
+            <a href="https://www.linkedin.com/in/richards24/" target="_blank" style={{ fontSize: "1rem" }}>
               Richard Suárez
             </a>
           </li>
           <li>
-            <a href="#" target="_blank" style={{ fontSize: "1rem" }}>
+            <a href="https://www.linkedin.com/in/pedro-manuel-grandini-b1a171302/" target="_blank" style={{ fontSize: "1rem" }}>
               Pedro Grandini
             </a>
           </li>
           <li>
-            <a href="#" target="_blank" style={{ fontSize: "1rem" }}>
+            <a href="https://www.linkedin.com/in/luis-grandini-a1681b293/" target="_blank" style={{ fontSize: "1rem" }}>
               Luis Grandini
             </a>
           </li>
           <li>
-            <a href="#" target="_blank" style={{ fontSize: "1rem" }}>
+            <a href="https://www.linkedin.com/in/antonio-martinez-developer/" target="_blank" style={{ fontSize: "1rem" }}>
               Antonio Martínez
             </a>
           </li>
