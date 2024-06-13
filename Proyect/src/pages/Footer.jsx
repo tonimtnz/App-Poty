@@ -33,7 +33,7 @@ export function Footer() {
             </a>
           </li>
           <li>
-            <a href="#" target="_blank" style={{ fontSize: "1rem" }}>
+            <a href="https://www.linkedin.com/in/jairoromerogarzon/" target="_blank" style={{ fontSize: "1rem" }}>
               Jairo Romero
             </a>
           </li>
