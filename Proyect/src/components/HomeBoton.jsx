@@ -9,7 +9,7 @@ function HomeBoton() {
         </Link>
         <div className="botones-inferiores">
           <button className="boton-playlist">Mis Playlists</button>
-          <button className="boton-artista">Artistas</button>
+          <Link className="boton-artista" to="/artists">Artistas</Link>
         </div>
       </div>
     </>

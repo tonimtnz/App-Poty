@@ -52,6 +52,10 @@
   background-color: #148a08;
   color: var(--font-main-color);
   border-radius: 20px;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .boton-artista:hover {

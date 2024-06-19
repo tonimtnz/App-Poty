@@ -9,6 +9,7 @@ import { Home } from "./pages/Home";
 import { UserContext } from "./context/userContext";
 import { useContext } from "react";
 import { RecommendMusic } from "./pages/RecommendMusic";
+import { Artists } from "./pages/Artists";
 
 
 function App() {
@@ -25,6 +26,7 @@ function App() {
           <Route path="/home" element={<Home/>}/>
           <Route path="/users/:userId" element={<FetchUserProfileData />} />
           <Route path="/recommend" element={<RecommendMusic />}/>
+          <Route path="/artists" element={<Artists />}/>
         </Routes>
       {!isLoginPage && <Footer />}
     </>

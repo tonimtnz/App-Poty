@@ -1,6 +1,6 @@
 import { useContext } from "react"
 import { UserContext } from "../../context/userContext"
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 export function HeaderUserData({userImg, userName, myUserId}){
     const navigate = useNavigate();
@@ -13,6 +13,9 @@ export function HeaderUserData({userImg, userName, myUserId}){
     function handleMyProf(){
         navigate(`/users/${myUserId}`)
     }
+    function handleMyArt(){
+        navigate('/artists')
+    }
 
     return(
         <div className="header-mc-user-menu-data">
@@ -23,7 +26,7 @@ export function HeaderUserData({userImg, userName, myUserId}){
             <div className="menu-data-user-props">
                 <a className="user-props-link" onClick={handleMyProf}>Mi perfil</a>
                 <a className="user-props-link">Mis playlists</a>        
-                <a className="user-props-link">Mis artistas favoritos</a>
+                <a className="user-props-link" onClick={handleMyArt}>Mis artistas favoritos</a>
             </div>
             <hr></hr>
             <div className="menu-data-user-props">
