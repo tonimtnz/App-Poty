@@ -2,7 +2,56 @@
   background-color: #363636;
   color: #ffffff;
   width: 1240px;
+  --main-color: #363636;
+  --second-color: #005d65;
+  --bg-cards-color: #474e53;
+  --font-main-color: #ffffff;
+  --font-second-color: #04faf6;
+  --emphasis-color: #00f7ff;
+  --font-global: "Poppins";
+}
+body {
+  background-color: var(--main-color);
+  width: 100%;
   margin: 0 auto;
   padding: 0;
-  font-family: "Poppins";
+  font-family: var(--font-global);
+}
+
+button {
+  background-color: var(--emphasis-color);
+  font-family: var(--font-global);
+  color: var(--main-color);
+  font-weight: 500;
+  font-size: 1rem;
+  border-radius: 50px;
+  border: none;
+  padding: 8px 24px;
+  display: flex;
+  flex-direction: row;
+  gap: 0.5rem;
+  align-items: center;
+  cursor: pointer;
+  transition: all ease-in-out 0.3s;
+  justify-content: center;
+}
+
+
+
+button path {
+  transition: all ease-in-out 0.3s;
+}
+
+button:hover {
+  background-color: var(--second-color);
+  color: var(--font-main-color);
+}
+
+button:hover path {
+  fill: var(--font-main-color);
+
+}
+*{
+  box-sizing: border-box;
+
 }
