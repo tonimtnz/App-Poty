@@ -16,6 +16,7 @@
     flex-wrap: wrap;
 }
 .artist-card{
+    cursor: pointer;
     border-radius: 32px;
     background-color: var(--bg-cards-color);
     text-decoration: none;
