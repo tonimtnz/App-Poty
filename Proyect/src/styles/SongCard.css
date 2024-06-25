@@ -2,14 +2,51 @@
   box-sizing: border-box;
 }
 
-.cards-container {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  width: 75%;
+.cards-container-padre {
   background-color: #242424;
   padding: 0.5rem;
   border-radius: 20px;
   height: fit-content;
+  width: 75%;
+}
+
+.genre-btns-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 1rem;
+  margin: 0;
+  gap: 0.875rem;
+}
+
+.genre-btns-container li {
+  list-style: none;
+}
+
+.genre-btns-container li a {
+  text-decoration: none;
+  background-color: #4c4c4c;
+  color: var(--font-main-color);
+  padding: 0.5rem 1rem;
+  border-radius: 999px;
+  transition: all ease-in-out 0.3s;
+  font-weight: 500;
+}
+
+.genre-btns-container li a:hover {
+  background-color: #005d65;
+  cursor: pointer;
+}
+
+.genre-btns-container li.selected a {
+  background-color: var(--emphasis-color);
+  color: var(--second-color);
+}
+
+.cards-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
 }
 
 .card {
@@ -103,7 +140,7 @@ h5 {
   background: url(../assets/hero-recommendationSection.jpg);
   background-repeat: no-repeat;
   background-size: cover;
-  border-radius: 22px;
+  border-radius: 26px;
 }
 
 .intern-hero .reco-title {
@@ -164,6 +201,7 @@ MEDIAQUERIES */
   .dislaimer-container {
     display: none;
   }
+
   .intern-hero .reco-title {
     font-size: 1.5rem;
   }
@@ -171,9 +209,20 @@ MEDIAQUERIES */
     font-size: 0.9rem;
   }
 
+  .cards-container-padre {
+    width: 100%;
+    border-radius: 12px;
+    padding: 0.5rem;
+  }
+
   .cards-container {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
+  }
+
+  .genre-btns-container li a {
+    font-size: 0.75rem;
+    padding: 0.35rem 0.75rem;
   }
 
   .lateral-main-container {
@@ -189,18 +238,15 @@ MEDIAQUERIES */
     margin: 0;
     padding: 1rem;
     height: 160px;
-    border-radius: 12px;
+    border-radius: 16px;
+    overflow: hidden;
   }
   .content-container {
     width: 100%;
     padding: 0.5rem;
     flex-direction: column;
   }
-  .cards-container {
-    width: 100%;
-    border-radius: 12px;
-    padding: 0.5rem;
-  }
+
   .play-song-card {
     height: 152px !important;
     padding: 0.5;
@@ -224,6 +270,18 @@ MEDIAQUERIES */
   }
   .intern-hero p {
     font-size: 0.9rem;
+  }
+
+  .cards-container-padre {
+    width: 100%;
+    border-radius: 12px;
+    padding: 0.5rem;
+  }
+
+  .genre-btns-container {
+    gap: 0.35rem;
+    flex-wrap: wrap;
+    /* justify-content: center; */
   }
 
   .cards-container {
@@ -251,11 +309,7 @@ MEDIAQUERIES */
     padding: 0.5rem;
     flex-direction: column;
   }
-  .cards-container {
-    width: 100%;
-    border-radius: 12px;
-    padding: 0.5rem;
-  }
+
   .play-song-card {
     height: 152px !important;
     padding: 0.5;

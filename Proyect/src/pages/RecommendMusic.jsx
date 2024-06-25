@@ -6,8 +6,33 @@ import { MusicPlaceholder } from "../components/MusicPlaceholder";
 import { LoadingComp } from "../components/LoadingComp";
 
 export function RecommendMusic() {
-  const { songs, loading, currentSong, currentSongId, handlePlayClick } =
-    useFetchMusicRecommendations();
+  const {
+    songs,
+    loading,
+    currentSong,
+    currentSongId,
+    handlePlayClick,
+    selectedGenre,
+    setSelectedGenre,
+  } = useFetchMusicRecommendations();
+
+  const genreList = [
+    "pop",
+    "rock",
+    "metal",
+    "alternative",
+    "indie",
+    "classical",
+    "salsa",
+    "latin",
+    "country",
+    "anime",
+  ];
+
+  const handleGenreClick = (event, genre) => {
+    event.preventDefault();
+    setSelectedGenre(genre);
+  };
 
   return (
     <>
@@ -16,16 +41,33 @@ export function RecommendMusic() {
         {loading ? (
           <LoadingComp />
         ) : (
-          <div className="cards-container">
-            {songs.tracks?.map((song) => {
-              return (
-                <SongCard
-                  key={song?.id}
-                  eachSong={song}
-                  onPlayClick={handlePlayClick}
-                />
-              );
-            })}
+          <div className="cards-container-padre">
+            <div className="genre-btn-container">
+              <ul className="genre-btns-container">
+                {genreList.map((genre) => {
+                  return (
+                    <li
+                      key={genre}
+                      className={selectedGenre === genre ? "selected" : ""}
+                      onClick={(event) => handleGenreClick(event, genre)}
+                    >
+                      <a href="#">{genre}</a>
+                    </li>
+                  );
+                })}
+              </ul>
+            </div>
+            <div className="cards-container">
+              {songs.tracks?.map((song) => {
+                return (
+                  <SongCard
+                    key={song?.id}
+                    eachSong={song}
+                    onPlayClick={handlePlayClick}
+                  />
+                );
+              })}
+            </div>
           </div>
         )}
 
