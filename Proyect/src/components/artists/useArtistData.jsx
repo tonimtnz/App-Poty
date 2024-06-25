@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 export function useArtistData(artistID) {
   
@@ -24,5 +24,8 @@ export function useArtistData(artistID) {
     } 
 }
 
+    useEffect(() => {
+        GetArtistData()
+    }, [artistID])
   return { artistInfo, GetArtistData }
 }

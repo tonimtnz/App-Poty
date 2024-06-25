@@ -10,7 +10,6 @@ export function ArtistCard({ artistName, artistPage, artistImg, artistFollowers 
 
 
         function handleLink(){
-                GetArtistData()
                 if( artistInfo != undefined){
                         navigate(`/artists/${artistID}`)
                         console.log(artistInfo)

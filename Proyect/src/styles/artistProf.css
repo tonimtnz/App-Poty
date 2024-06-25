@@ -1,0 +1,46 @@
+.artist-prof{
+    width: 100%;
+    max-width: 1920px;
+    height: fit-content;
+    box-sizing: border-box;
+}
+
+.artist-banner{
+    padding: 2rem;
+    display: flex;
+    height: fit-content;
+    flex-direction: row;
+    gap: 1rem;
+    justify-content: space-between;
+
+    img{
+        border-radius: 10%;
+        width: 250px;
+        aspect-ratio: 1/1;
+    }
+}
+.artist-info-cont{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.artist-info-stats{
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+}
+.artist-name{
+    color: var(--font-main-color);
+    align-self: end;
+    font-size: xx-large;
+    text-shadow: var(--main-color) 3px 2px
+}
+.stats-info{
+    background-color: var(--main-color);
+    color: var(--font-main-color);
+    padding: 1rem;
+    font-size: small;
+    text-align: center;
+    border-radius: 10%;
+    width: 180px;
+}

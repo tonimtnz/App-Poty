@@ -1,12 +1,17 @@
 import { useArtistData } from "./useArtistData"
 import { ArtistInfo } from "./ArtistInfo"
+import { useParams } from "react-router-dom"
+import '../../styles/artistProf.css'
+
+
 export function ArtistProfile(){
-    const { artistInfo } = useArtistData()
+    const { artistID } = useParams();
+    const { artistInfo } = useArtistData(artistID);
 
     console.log(artistInfo)
     return(
         <div className="artist-prof">
-            <ArtistInfo artistData={artistInfo}/>
+            {artistInfo && <ArtistInfo artistData={artistInfo}/>}
         </div>
     )
 }
