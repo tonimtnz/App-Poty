@@ -9,7 +9,8 @@ export function ArtistCard({ artistName, artistPage, artistImg, artistFollowers 
         const { artistInfo, GetArtistData } = useArtistData(artistID)
 
 
-        function handleLink(){
+        async function handleLink(){
+               await GetArtistData()
                 if( artistInfo != undefined){
                         navigate(`/artists/${artistID}`)
                         console.log(artistInfo)
