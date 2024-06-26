@@ -9,7 +9,7 @@ export function useArtistData(artistID) {
     const options = {
       method: "GET",
       headers: {
-        "x-rapidapi-key": "45933ff01amsh2e634ad30de7456p10ec3ajsn8cb7556dbdd5",
+        "x-rapidapi-key": "a7ba024be4msh62972134813b622p155dfejsn4695604f06f6",
         "x-rapidapi-host": "spotify23.p.rapidapi.com",
       },
     };

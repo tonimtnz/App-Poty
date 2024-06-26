@@ -11,11 +11,11 @@ export function PlaylistCard({ playlistInfo }) {
      }else{
        const initPartes = playlistInfo.image_url;
        const partes = playlistInfo.image_url.split(":");
-       if(partes[0] === "https" ){
+       if(partes[0] === "https"){
          const ids = initPartes
          console.log(ids)
          return ids;
-       }else{
+       }else{ 
          const ids = partes.slice(2).join("");
          console.log(ids)
          return ids;
