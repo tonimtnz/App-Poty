@@ -28,6 +28,7 @@ export function ArtistInfo({artistData}){
                     </div>
                 </div>
             </div>
+            
         </div>
     )
 }

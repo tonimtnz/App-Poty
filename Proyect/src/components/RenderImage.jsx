@@ -1,16 +1,16 @@
 export function RenderImage({image_id}){
-    console.log(image_id)
-
-    const check = "thisis";
+    const types = {
+        placeholder: "",
+        url: "",
+        mosaic: "https://mosaic.scdn.co/300/",
+        image: "https://i.scdn.co/image/",
+      };
+    
 
     return(
-        <>
-        {image_id === '../assets/playlist-holder.jpg' ? <img className="img-playlist" src="https://runmydev.com/wp-content/uploads/2024/05/Frame-2-1.png"/>
-        :
-        <img className="img-playlist" src={image_id.length > 44 
-            ? `https://mosaic.scdn.co/300/${image_id}`
-            : `https://i.scdn.co/image/${image_id}`}/>}
-        
-        </>
+        <img
+        className="img-playlist"
+        src={`${types[image_id.type]}${image_id.img}`}
+      />
       )
 }

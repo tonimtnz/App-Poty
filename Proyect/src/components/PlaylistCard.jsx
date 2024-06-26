@@ -4,7 +4,26 @@ import { RenderImage } from "./RenderImage";
 
 export function PlaylistCard({ playlistInfo }) {
   function getImageId(playlistInfo) {
-    console.log(playlistInfo)
+    if (!playlistInfo.image_url) {
+      const idPlace = {
+        type: "placeholder",
+        img: "https://runmydev.com/wp-content/uploads/2024/05/Frame-2-1.png",
+      };
+      return idPlace;
+    } else if (playlistInfo.image_url.includes("https")) {
+      return { type: "url", img: playlistInfo.image_url };
+    } else {
+      let type = "";
+      if (playlistInfo.image_url.includes("mosaic")) type = "mosaic";
+      else type = "image";
+      const partes = playlistInfo.image_url.split(":");
+      const ids = partes.slice(2).join("");
+      return { type: type, img: ids };
+    }
+
+
+    //!Esto se queda comentado por ahora
+    /* console.log(playlistInfo)
      if(!playlistInfo.image_url){
       const idPlace = '../assets/playlist-holder.jpg'
       return idPlace;
@@ -20,7 +39,7 @@ export function PlaylistCard({ playlistInfo }) {
          console.log(ids)
          return ids;
        }
-     }
+     } */
     }
   
 
