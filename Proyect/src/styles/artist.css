@@ -1,3 +1,4 @@
+
 .artist-container{
     max-width: 1920px;
     margin: 2rem auto;
@@ -33,7 +34,7 @@
 
     img{
         position: relative;
-        width: 60%;
+        width: 100%;
         object-fit: cover;
         aspect-ratio: 1/1;
         height: auto;

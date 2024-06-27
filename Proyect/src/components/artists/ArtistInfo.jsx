@@ -1,24 +1,34 @@
-import { ArtistAlbums } from "./ArtistAlbums"
+import { ArtistAlbums } from "./ArtistAlbums";
+import { Verification } from "./Verification";
+import { AboutArtist } from "./AboutArtist";
 
-export function ArtistInfo({artistData}){
+export function ArtistInfo({ artistData }) {
+  const img = artistData.visuals.avatarImage.sources[0].url;
+  const stats = artistData.stats;
+  //const profile = artistData.profile;
+  const albums = artistData.discography.albums.items;
+  //const disc = artistData.discography;
+  const artistColor =
+    artistData.visuals.avatarImage.extractedColors.colorRaw.hex;
 
-
-    const img =  artistData.visuals.avatarImage.sources[0].url
-    const stats =  artistData.stats
-    const profile = artistData.profile
-    const albums = artistData.discography.albums.items
-    const disc =  artistData.discography
-    const artistColor = artistData.visuals.avatarImage.extractedColors.colorRaw.hex
-    console.log(artistData)
-    console.log(artistColor)
-    
-    return(
-        <div className="artist-prof-info">
-            <div className="artist-banner" style={{backgroundColor : `${artistColor}`}}>
-                <img src={img} />
-                <div className="artist-info-cont">
-                    <h2 className="artist-name">{artistData.profile.name}</h2>
-                    <div className="artist-info-stats">
+  const artistVerification = artistData.profile.verified;
+  console.log(artistData);
+  const popularReleases = artistData.discography.popularReleases;
+  return (
+    <>
+      <div
+        className="artist-prof-info"
+        style={{ backgroundColor: `${artistColor}` }}
+      >
+        <div className="artist-banner">
+          <img src={img} />
+          <div className="artist-info-cont">
+            {artistVerification && <Verification />}
+            <h2 className="artist-name">{artistData.profile.name}</h2>
+            <h4 className="listeners-quanty">
+              {stats.monthlyListeners} Oyentes mensuales
+            </h4>
+            {/*<div className="artist-info-stats">
                         <div className="stats-info">
                             <h2>{stats.followers} Seguidores</h2>
                         </div>
@@ -28,10 +38,14 @@ export function ArtistInfo({artistData}){
                         <div className="stats-info">
                             <h2>Álbumes: {disc.albums.totalCount}</h2>
                         </div>
-                    </div>
-                </div>
-            </div>
-            <ArtistAlbums albumsData={albums}/>
+                    </div>*/}
+          </div>
         </div>
-    )
+      </div>
+      <div className="displayInfo">
+        <AboutArtist bioInfo={artistData.profile} />
+        <ArtistAlbums albumsData={albums} popularReleases={popularReleases} />
+      </div>
+    </>
+  );
 }
