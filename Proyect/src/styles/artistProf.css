@@ -1,4 +1,5 @@
 .artist-prof{
+    position: relative;
     width: 100%;
     max-width: 1920px;
     height: fit-content;
@@ -6,17 +7,18 @@
 }
 
 .artist-banner{
-    padding: 2rem;
+    padding: 1rem 2rem;
     display: flex;
     height: fit-content;
     flex-direction: row;
     gap: 1rem;
+    align-items: center;
     justify-content: space-between;
 
     img{
         border-radius: 10%;
-        width: 250px;
-        aspect-ratio: 1/1;
+        width: 150px;
+        height: 150px;
     }
 }
 .artist-info-cont{
@@ -41,6 +43,80 @@
     padding: 1rem;
     font-size: small;
     text-align: center;
-    border-radius: 10%;
+    border-radius: 24px;
     width: 180px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    h2{
+        margin: 0;
+    }
+}
+.artist-albums-cont{
+    position: relative;
+    box-sizing: border-box;
+    height: fit-content;
+    background-color: #161616;
+    padding: 2rem;
+    border-radius: 24px;
+    margin: 2rem;
+    padding-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    h2{
+        color: var(--font-main-color);
+        text-shadow: var(--second-color) 3px 2px;
+        margin: 0;
+    }
+}
+.albums-cards-container{
+    display: flex;
+    box-sizing: border-box;
+    flex-direction: row;
+    border-radius: 12px;
+    overflow: scroll;
+    padding-bottom: 1rem;
+    gap: 2rem;
+    position: relative;
+    width: 100%;
+}
+.artist-album-card{
+    background-color: var(--second-color);
+    border-radius: 12px;
+    padding: 1rem;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    width: 20%;
+    align-items: center;
+    text-align: center;
+    font-size: small;
+
+    .album-img-cont{
+        border-radius: 12px;
+        box-shadow: 0 0 10px 3px #161616;
+        box-sizing: border-box;
+        padding: 0;
+        display: flex;
+        img{
+            position: relative;
+            border-radius: 12px;
+            width: 150px;
+
+        }
+    }
+
+    .artist-album-info{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        text-align: left;
+        h3,h4,h5{
+           margin: 0;
+        }
+    }
 }

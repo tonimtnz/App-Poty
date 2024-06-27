@@ -1,11 +1,14 @@
+import { ArtistAlbums } from "./ArtistAlbums"
+
 export function ArtistInfo({artistData}){
 
 
     const img =  artistData.visuals.avatarImage.sources[0].url
     const stats =  artistData.stats
     const profile = artistData.profile
+    const albums = artistData.discography.albums.items
     const disc =  artistData.discography
-    const artistColor = artistData.visuals.headerImage.extractedColors.colorRaw.hex
+    const artistColor = artistData.visuals.avatarImage.extractedColors.colorRaw.hex
     console.log(artistData)
     console.log(artistColor)
     
@@ -28,7 +31,7 @@ export function ArtistInfo({artistData}){
                     </div>
                 </div>
             </div>
-            
+            <ArtistAlbums albumsData={albums}/>
         </div>
     )
 }
