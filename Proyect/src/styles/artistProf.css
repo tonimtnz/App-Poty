@@ -231,3 +231,31 @@
   padding: 0;
   font-size: 0.75rem;
 }
+
+@media (max-width: 1025px) {
+  .displayInfo {
+    flex-direction: column;
+  }
+  .bioInfo-container {
+    width: 100%;
+    order: 2;
+    flex: 1;
+  }
+  .artist-albums-cont {
+    width: 100%;
+    order: 1;
+    flex: 1;
+  }
+  .artist-banner {
+    flex-direction: column;
+    height: fit-content;
+  }
+
+  .artist-name {
+    font-size: 2rem;
+  }
+  .artist-info-cont {
+    align-items: center;
+    justify-content: center;
+  }
+}

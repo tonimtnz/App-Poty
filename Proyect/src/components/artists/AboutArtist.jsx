@@ -3,7 +3,7 @@ import { useState } from "react";
 
 export function AboutArtist({ bioInfo }) {
   const [isExpanded, setIsExpanded] = useState(false);
-  const maxLength = 320;
+  const maxLength = 400;
 
   const toggleReadMore = () => {
     setIsExpanded(!isExpanded);
