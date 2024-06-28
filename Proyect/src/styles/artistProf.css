@@ -239,6 +239,7 @@
 }
 .artist-song-card:hover{
   background-color: #474e53;
+  cursor: pointer;
 }
 .artist-song-info{
   display: flex;
