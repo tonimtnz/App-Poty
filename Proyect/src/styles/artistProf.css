@@ -208,27 +208,33 @@
 .artist-songs-cont{
   background-color: #242424;
   margin: 0 2rem 2rem 2rem;
+  padding: 1rem;
   box-sizing: border-box;
   border-radius: 24px;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+  h2{
+    margin: 1rem;
+    color: var(--font-main-color);
+  }
 }
 .artist-song-card{
   display: flex;
   color: var(--font-main-color);
   position: relative;
   flex-direction: row;
-  padding: 2rem;
+  padding: 1rem;
   box-sizing: border-box;
   align-items: center;
   border-radius: 12px;
   gap: 2rem;
   width: 100%;
   box-sizing: border-box;
+  transition: all ease-in-out .3s;
 
   img{
-    width: 150px;
+    width: 100px;
     border-radius: 12px;
   }
   button{
@@ -245,12 +251,21 @@
   display: flex;
   flex-direction: row;
   align-items: center;
-  width: fit-content;
+  width: 30%;
+  flex-wrap: nowrap;
   font-size: larger;
-  gap: 4rem;
-  justify-content: space-between;
+  gap: 2rem;
+  justify-content: center;
+  text-align: left;
   h3{
     margin: 0;
+    font-size: smaller;
+    width: 50%;
+    text-align: center;
+  }
+  h5{
+    width: 30%;
+    text-align: center;
   }
 }
 
@@ -284,6 +299,16 @@
   padding: 0;
   font-size: 0.75rem;
 }
+.card-and-iframe{
+  position: relative;
+  width: 100%;
+}
+.song-repro{
+  position: absolute;
+  z-index: 5;
+  top: 1.5rem;
+  right: 1rem;
+}
 
 @media (max-width: 1025px) {
   .displayInfo {
@@ -310,5 +335,49 @@
   .artist-info-cont {
     align-items: center;
     justify-content: center;
+  }
+  .artist-songs-cont{
+    padding-bottom: 1rem;
+  }
+  .artist-song-card{
+    align-items: center;
+    gap: 1rem;
+    text-align: left;
+    padding: 1rem 1rem 0 1rem;
+    img{
+      width: 80px;
+    }
+  }
+  .artist-song-info{
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    width: 50%;
+    font-size: medium;
+    h3{
+      width: 100%;
+      text-align: left;
+    }
+    h5{
+      display: none;
+    }
+  }
+  .song-repro{
+    top: 1rem;
+  }
+}
+@media (max-width: 456px){
+  .artist-songs-cont{
+    justify-content: center;
+    margin: 0.5rem;
+    h2{
+      font-size: large;
+    }
+  }
+  .artist-song-card button{
+    right: 1rem;
+  }
+  .song-repro{
+    width: 75%;
   }
 }

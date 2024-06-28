@@ -7,7 +7,7 @@ export function ArtistInfo({ artistData }) {
   const img = artistData.visuals.avatarImage.sources[0].url;
   const stats = artistData.stats;
   //const profile = artistData.profile;
-  const albums = artistData.discography.albums.items;
+  const albums = artistData.discography.popularReleases.items;
   //const disc = artistData.discography;
   const artistColor = artistData.visuals.avatarImage.extractedColors.colorRaw.hex;
   const artistVerification = artistData.profile.verified;
@@ -26,17 +26,6 @@ export function ArtistInfo({ artistData }) {
             <h4 className="listeners-quanty">
               {stats.monthlyListeners} Oyentes mensuales
             </h4>
-            {/*<div className="artist-info-stats">
-                        <div className="stats-info">
-                            <h2>{stats.followers} Seguidores</h2>
-                        </div>
-                        <div className="stats-info">
-                            <h2>{stats.monthlyListeners} Oyentes Mensuales</h2>
-                        </div>
-                        <div className="stats-info">
-                            <h2>Álbumes: {disc.albums.totalCount}</h2>
-                        </div>
-                    </div>*/}
           </div>
         </div>
       </div>

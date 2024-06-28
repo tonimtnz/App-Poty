@@ -5,6 +5,7 @@ export function ArtistSongs({ songs }){
 
     return(
         <div className="artist-songs-cont">
+            <h2>Canciones más populares</h2>
             {songs?.map((song) => {
                 return(
                     <ArtistSongCard
