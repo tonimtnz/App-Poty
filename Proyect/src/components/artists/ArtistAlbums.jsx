@@ -19,12 +19,6 @@ export function ArtistAlbums({ albumsData }) {
           );
         })}
       </div>
-      {/*<h2>Últimos lanzamientos</h2>
-      <ul>
-        {popularReleases?.items?.map((release) => {
-          return <ReleasesCard key={release.name} release={release} />;
-        })}
-      </ul>*/}
     </div>
   );
 }

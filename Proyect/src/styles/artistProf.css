@@ -200,6 +200,58 @@
   color: var(--font-main-color);
   font-weight: 600;
 }
+.artist-popular-songs{
+  width: 100%;
+  max-width: 1920px;
+  margin: 0 auto;
+}
+.artist-songs-cont{
+  background-color: #242424;
+  margin: 0 2rem 2rem 2rem;
+  box-sizing: border-box;
+  border-radius: 24px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.artist-song-card{
+  display: flex;
+  color: var(--font-main-color);
+  position: relative;
+  flex-direction: row;
+  padding: 2rem;
+  box-sizing: border-box;
+  align-items: center;
+  border-radius: 12px;
+  gap: 2rem;
+  width: 100%;
+  box-sizing: border-box;
+
+  img{
+    width: 150px;
+    border-radius: 12px;
+  }
+  button{
+    position: absolute;
+    padding: 14px 14px 12px 18px;
+    right: 2rem;
+  }
+}
+.artist-song-card:hover{
+  background-color: #474e53;
+}
+.artist-song-info{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: fit-content;
+  font-size: larger;
+  gap: 4rem;
+  justify-content: space-between;
+  h3{
+    margin: 0;
+  }
+}
 
 ::-webkit-scrollbar {
   width: 20px;

@@ -1,6 +1,7 @@
 import { ArtistAlbums } from "./ArtistAlbums";
 import { Verification } from "./Verification";
 import { AboutArtist } from "./AboutArtist";
+import { ArtistSongs } from "./ArtistSongs";
 
 export function ArtistInfo({ artistData }) {
   const img = artistData.visuals.avatarImage.sources[0].url;
@@ -8,12 +9,9 @@ export function ArtistInfo({ artistData }) {
   //const profile = artistData.profile;
   const albums = artistData.discography.albums.items;
   //const disc = artistData.discography;
-  const artistColor =
-    artistData.visuals.avatarImage.extractedColors.colorRaw.hex;
-
+  const artistColor = artistData.visuals.avatarImage.extractedColors.colorRaw.hex;
   const artistVerification = artistData.profile.verified;
-  console.log(artistData);
-  const popularReleases = artistData.discography.popularReleases;
+  const popularSongs = artistData.discography.topTracks.items;
   return (
     <>
       <div
@@ -43,9 +41,12 @@ export function ArtistInfo({ artistData }) {
         </div>
       </div>
       <div className="displayInfo">
-        <AboutArtist bioInfo={artistData.profile} />
-        <ArtistAlbums albumsData={albums} popularReleases={popularReleases} />
+        <AboutArtist bioInfo={artistData.profile} verify={artistVerification} />
+        <ArtistAlbums albumsData={albums}/>
       </div>
+      <div className="artist-popular-songs">
+        <ArtistSongs songs={popularSongs}/>
+      </div> 
     </>
   );
 }
