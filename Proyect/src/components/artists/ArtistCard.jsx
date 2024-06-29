@@ -25,6 +25,7 @@ export function ArtistCard({
       <div className="artist-info">
         <h2>{artistName}</h2>
         <h4>{artistFollowers} Seguidores</h4>
+        <h5>Ver perfil</h5>
       </div>
     </a>
   );

@@ -31,11 +31,11 @@ export function ArtistInfo({ artistData }) {
       </div>
       <div className="displayInfo">
         <AboutArtist bioInfo={artistData.profile} verify={artistVerification} />
-        <ArtistAlbums albumsData={albums}/>
-      </div>
       <div className="artist-popular-songs">
+        <ArtistAlbums albumsData={albums}/>
         <ArtistSongs songs={popularSongs}/>
       </div> 
+      </div>
     </>
   );
 }

@@ -54,6 +54,7 @@
 .displayInfo {
   display: flex;
   flex-direction: row;
+  width: 100%;
   gap: 1rem;
   max-width: 1920px;
   margin: 1rem auto;
@@ -140,7 +141,7 @@
   padding: 1rem;
   border-radius: 20px;
   height: fit-content;
-  width: 75%;
+  width: 100%;
   overflow-x: hidden;
   h2 {
     color: var(--font-main-color);
@@ -201,21 +202,24 @@
   font-weight: 600;
 }
 .artist-popular-songs{
-  width: 100%;
-  max-width: 1920px;
-  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  position: relative;
+  max-width: 75%;
 }
 .artist-songs-cont{
   background-color: #242424;
-  margin: 0 2rem 2rem 2rem;
+  margin: 2rem 0;
   padding: 1rem;
   box-sizing: border-box;
   border-radius: 24px;
+  width: 100%;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   h2{
-    margin: 1rem;
+    margin: 1rem 0;
     color: var(--font-main-color);
   }
 }
@@ -253,9 +257,9 @@
   align-items: center;
   width: 30%;
   flex-wrap: nowrap;
-  font-size: larger;
+  font-size: 14px;
   gap: 2rem;
-  justify-content: center;
+  justify-content: flex-start;
   text-align: left;
   h3{
     margin: 0;
@@ -315,14 +319,11 @@
     flex-direction: column;
   }
   .bioInfo-container {
-    width: 100%;
-    order: 2;
-    flex: 1;
+    width: 100%; 
   }
   .artist-albums-cont {
     width: 100%;
-    order: 1;
-    flex: 1;
+  
   }
   .artist-banner {
     flex-direction: column;
@@ -337,7 +338,10 @@
     justify-content: center;
   }
   .artist-songs-cont{
+    text-align: left;
     padding-bottom: 1rem;
+    height: 600px;
+    overflow: scroll;
   }
   .artist-song-card{
     align-items: center;
@@ -347,6 +351,9 @@
     img{
       width: 80px;
     }
+  }
+  .artist-popular-songs{
+    max-width: 100%;
   }
   .artist-song-info{
     flex-direction: row;
@@ -368,8 +375,8 @@
 }
 @media (max-width: 456px){
   .artist-songs-cont{
-    justify-content: center;
-    margin: 0.5rem;
+    padding: 0;
+    padding-bottom: 1rem;
     h2{
       font-size: large;
     }
@@ -379,5 +386,7 @@
   }
   .song-repro{
     width: 75%;
+    right: 0;
+    transform: translateX(20px);
   }
 }
