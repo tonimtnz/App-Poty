@@ -45,7 +45,7 @@ export function Header() {
           <Link to="/home"><HomeLogo/></Link>
         </div>
         <div className="mobile-button mobile-nav-playlist-button">
-          <Link><PlaylistLogo/></Link>
+          <Link to="/artists"><PlaylistLogo/></Link>
         </div>
         <div className="mobile-button mobile-nav-profile-button">
           <Link><UserSettings/></Link>

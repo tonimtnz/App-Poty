@@ -9,7 +9,7 @@ export function useGetUserId() {
     const options = {
       method: "GET",
       headers: {
-        "X-RapidAPI-Key": "d1af38e1e3msh092dd893a0dc5b6p1a17f9jsn79286d597314",
+        "X-RapidAPI-Key": "b056a64e6fmsh46a8aeb04e6120ap1dba19jsnb66686543229",
         "X-RapidAPI-Host": "spotify23.p.rapidapi.com",
       },
     };

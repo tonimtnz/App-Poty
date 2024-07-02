@@ -5,14 +5,14 @@ export function useFetchMusicRecommendations() {
   const [loading, setLoading] = useState(true);
   const [currentSongId, setCurrentSongId] = useState(null);
   const [currentSong, setCurrentSong] = useState(null);
+  const [selectedGenre, setSelectedGenre] = useState("pop");
 
   useEffect(() => {
-    const url =
-      "https://spotify23.p.rapidapi.com/recommendations/?limit=36&seed_tracks=0c6xIDDpzE81m2q797ordA&seed_artists=4NHQUGzhtTLFvgF5SZesLK&seed_genres=pop%2Crock";
+    const url = `https://spotify23.p.rapidapi.com/recommendations/?limit=36&seed_genres=${selectedGenre}`;
     const options = {
       method: "GET",
       headers: {
-        "X-RapidAPI-Key": "d1af38e1e3msh092dd893a0dc5b6p1a17f9jsn79286d597314",
+        "X-RapidAPI-Key": "b056a64e6fmsh46a8aeb04e6120ap1dba19jsnb66686543229",
         "X-RapidAPI-Host": "spotify23.p.rapidapi.com",
       },
     };
@@ -24,12 +24,20 @@ export function useFetchMusicRecommendations() {
         setLoading(false);
       })
       .catch((error) => console.error(error));
-  }, []);
+  }, [selectedGenre]);
 
   const handlePlayClick = (song) => {
     setCurrentSong(song);
     setCurrentSongId(song.id);
   };
 
-  return { songs, loading, currentSong, currentSongId, handlePlayClick };
+  return {
+    songs,
+    loading,
+    currentSong,
+    currentSongId,
+    handlePlayClick,
+    selectedGenre,
+    setSelectedGenre,
+  };
 }
