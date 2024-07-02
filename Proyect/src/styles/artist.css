@@ -62,6 +62,7 @@
         aspect-ratio: 1/1;
         height: auto;
         border-radius: 20px;
+        transition: all ease-in-out .3s;
     }
     h5{
         display: none;
@@ -72,7 +73,7 @@
     color: var(--emphasis-color);
     transform: translateY(-10px);
     img{
-        box-shadow: 0px 0px 10px 5px var(--main-color);
+        box-shadow: 0px 0px 10px 5px var(--emphasis-color);
     }
     h4{
         display: none;

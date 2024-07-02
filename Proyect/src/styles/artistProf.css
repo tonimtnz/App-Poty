@@ -378,7 +378,8 @@
     padding: 0;
     padding-bottom: 1rem;
     h2{
-      font-size: large;
+      margin: 2rem 1rem 1rem 1rem;
+      font-size: 24px;
     }
   }
   .artist-song-card button{
@@ -386,7 +387,7 @@
   }
   .song-repro{
     width: 75%;
-    right: 0;
+    right: 1.5rem;
     transform: translateX(20px);
   }
 }
