@@ -332,6 +332,7 @@
 
   .artist-name {
     font-size: 2rem;
+    align-self: center;
   }
   .artist-info-cont {
     align-items: center;
@@ -358,7 +359,7 @@
   .artist-song-info{
     flex-direction: row;
     flex-wrap: wrap;
-    align-items: flex-start;
+    align-items: center;
     width: 50%;
     font-size: medium;
     h3{
@@ -381,6 +382,10 @@
       margin: 2rem 1rem 1rem 1rem;
       font-size: 24px;
     }
+  }
+  .artist-name{
+    font-size: 1.5em;
+    align-self: center;
   }
   .artist-song-card button{
     right: 1rem;
